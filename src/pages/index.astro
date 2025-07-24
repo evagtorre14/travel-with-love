@@ -1,49 +1,45 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import MainLayout from '../layouts/MainLayout.astro';
+import { Plane, CalendarDays } from 'lucide-astro';
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to
-				<a href="https://docs.astro.build/">read the docs</a>
-				or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out
-				<a href="https://github.com/Charca/astro-blog-template">astro-blog-template</a>
-				by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
-</html>
+<MainLayout title="Albania 2025">
+	<section class="relative h-screen">
+		<img src="/images/theth_albania.jpg" alt="Imagen de las montañas de Theth, Albania" class="w-full h-full object-cover">
+		<div class="absolute inset-0 bg-slate-gray/50 flex flex-col justify-center items-center text-center">
+			<h1 class="text-6xl font-sans font-semibold text-linen-white">Albania 2025</h1>
+			<div class="flex items-center justify-center text-2xl text-linen-white mt-4">
+				<CalendarDays class="w-6 h-6 mr-2" />
+				<span>Del 6 al 17 de Agosto</span>
+			</div>
+			<p class="text-xl text-linen-white mt-4">Un viaje entre el mar y la montaña</p>
+		</div>
+	</section>
+
+	<section id="itinerary" class="py-20 px-4">
+		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">Itinerario</h2>
+		<div class="space-y-8 max-w-4xl mx-auto">
+			<div class="flex items-start">
+				<Plane class="text-terracotta w-8 h-8 mr-4" fill="currentColor" />
+				<div>
+					<h3 class="text-2xl font-sans font-semibold text-slate-gray">Día 1: Llegada a Tirana</h3>
+					<p class="text-slate-gray">Llegada al aeropuerto, recogida del coche de alquiler y traslado al hotel.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="lodging" class="py-20 px-4 bg-alpine-green text-linen-white">
+		<h2 class="text-4xl font-sans font-semibold text-center mb-12">Alojamientos</h2>
+		<div class="max-w-4xl mx-auto">
+			<p>Aquí se mostrará la información de los alojamientos.</p>
+		</div>
+	</section>
+
+	<section id="restaurants" class="py-20 px-4">
+		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">Restaurantes</h2>
+		<div class="max-w-4xl mx-auto">
+			<p>Aquí se mostrará la información de los restaurantes.</p>
+		</div>
+	</section>
+</MainLayout>
