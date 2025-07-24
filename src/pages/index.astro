@@ -1,7 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import Countdown from '../components/Countdown.astro';
-import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain } from 'lucide-astro';
+import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain, Landmark, Castle, Camera, Moon, Church, Bike, Backpack, Sandwich, Droplets, Eye } from 'lucide-astro';
 ---
 
 <MainLayout title="Albania 2025">
@@ -54,7 +54,7 @@ import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain } from 'lucide-astr
 					<div class="space-y-4">
 						<div class="flex items-center">
 							<Bus class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Por la mañana, viaje en autobús de Tirana a Shkodër.</p>
+							<p class="text-slate-gray">Por la mañana, viaje en autobús de Tirana a Shkodër (duración aproximada: 2 horas).</p>
 						</div>
 						<div class="flex items-center">
 							<Footprints class="w-6 h-6 mr-4 text-terracotta" />
@@ -63,6 +63,38 @@ import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain } from 'lucide-astr
 						<div class="flex items-center">
 							<Mountain class="w-6 h-6 mr-4 text-terracotta" />
 							<p class="text-slate-gray">Al atardecer, traslado a Theth para adentrarnos en los Alpes Albaneses.</p>
+						</div>
+						<div class="flex items-center">
+							<Bed class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Noche en Theth, rodeadas de montañas.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Día 3 -->
+			<div class="relative mb-12">
+				<div class="absolute left-0 top-2 w-16 h-16 bg-terracotta text-linen-white rounded-full flex items-center justify-center text-2xl font-semibold shadow-md">
+					3
+				</div>
+				<div class="ml-28 pl-8 border-l-4 border-terracotta/50 py-4">
+					<h3 class="text-3xl font-semibold text-slate-gray mb-4">Viernes, 8 de Agosto</h3>
+					<div class="space-y-4">
+						<div class="flex items-start">
+							<Backpack class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Día de trekking. Madrugaremos para hacer la espectacular ruta desde Theth hasta el Paso de Valbona, el punto más alto y con las mejores vistas del recorrido.</p>
+						</div>
+						<div class="flex items-start">
+							<Sandwich class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Picnic en el Paso de Valbona para reponer fuerzas y disfrutar del paisaje antes de emprender el camino de vuelta a Theth.</p>
+						</div>
+						<div class="flex items-start">
+							<Footprints class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Tarde dedicada a explorar los encantos del pueblo de Theth y sus alrededores.</p>
+						</div>
+						<div class="flex items-start">
+							<Bed class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Segunda noche en Theth.</p>
 						</div>
 					</div>
 				</div>
@@ -83,4 +115,136 @@ import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain } from 'lucide-astr
 			<p>Aquí se mostrará la información de los restaurantes.</p>
 		</div>
 	</section>
+
+	<section id="destinations" class="py-20 px-4 bg-linen-white">
+		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">Explora los Destinos</h2>
+		<!-- Grid de Cards -->
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+			<!-- Card de Shkodër -->
+			<div class="destination-card relative rounded-lg overflow-hidden shadow-lg cursor-pointer group" data-target="shkoder-details">
+				<img src="/images/shkoder.jpg" alt="Imagen de Shkodër" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+				<div class="absolute inset-0 bg-slate-gray/60 flex items-center justify-center">
+					<h3 class="text-3xl font-semibold text-linen-white">Shkodër</h3>
+				</div>
+			</div>
+			<!-- Card de Theth -->
+			<div class="destination-card relative rounded-lg overflow-hidden shadow-lg cursor-pointer group" data-target="theth-details">
+				<img src="/images/theth_albania.jpg" alt="Imagen de Theth" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+				<div class="absolute inset-0 bg-slate-gray/60 flex items-center justify-center">
+					<h3 class="text-3xl font-semibold text-linen-white">Theth</h3>
+				</div>
+			</div>
+			<!-- Aquí se añadirán más cards -->
+		</div>
+	</section>
+
+	<!-- Secciones de Detalles de Destinos -->
+	<div id="destination-details-container" class="max-w-6xl mx-auto">
+		<!-- Detalles de Shkodër (Oculto por defecto) -->
+		<section id="shkoder-details" class="destination-details hidden py-20 px-4">
+			<h3 class="text-3xl font-semibold text-slate-gray mb-8">Puntos de Interés en Shkodër</h3>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="flex items-start">
+					<Castle class="w-8 h-8 mr-4 text-terracotta" />
+					<div>
+						<h4 class="font-semibold text-xl">Castillo de Rozafa</h4>
+						<p>Una fortaleza legendaria con vistas panorámicas al lago Shkodër y los ríos.</p>
+					</div>
+				</div>
+				<div class="flex items-start">
+					<Landmark class="w-8 h-8 mr-4 text-terracotta" />
+					<div>
+						<h4 class="font-semibold text-xl">Paseo Kole Idromeno</h4>
+						<p>El corazón de la ciudad, una calle peatonal de estilo veneciano llena de cafés y vida.</p>
+					</div>
+				</div>
+				<div class="flex items-start">
+					<Camera class="w-8 h-8 mr-4 text-terracotta" />
+					<div>
+						<h4 class="font-semibold text-xl">Museo de Fotografía Marubi</h4>
+						<p>Un impresionante archivo fotográfico que documenta la historia de Albania.</p>
+					</div>
+				</div>
+				<div class="flex items-start">
+					<Moon class="w-8 h-8 mr-4 text-terracotta" />
+					<div>
+						<h4 class="font-semibold text-xl">Mezquita de Ebu Bekr</h4>
+						<p>La mezquita principal de la ciudad, un hermoso ejemplo de arquitectura islámica moderna.</p>
+					</div>
+				</div>
+				<div class="flex items-start">
+					<Church class="w-8 h-8 mr-4 text-terracotta" />
+					<div>
+						<h4 class="font-semibold text-xl">Catedral Ortodoxa de la Natividad</h4>
+						<p>Un templo de reciente construcción que destaca por sus cúpulas y su iconografía interior.</p>
+					</div>
+				</div>
+				<div class="flex items-start">
+					<Bike class="w-8 h-8 mr-4 text-terracotta" />
+					<div>
+						<h4 class="font-semibold text-xl">Lago Shkodër</h4>
+						<p>El lago más grande de los Balcanes, ideal para un relajante paseo en bicicleta por sus orillas.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Detalles de Theth (Oculto por defecto) -->
+		<section id="theth-details" class="destination-details hidden py-20 px-4">
+			<h3 class="text-3xl font-semibold text-slate-gray mb-8">Puntos de Interés en Theth</h3>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+				<div class="flex items-start">
+					<Droplets class="w-8 h-8 mr-4 text-terracotta" />
+					<div>
+						<h4 class="font-semibold text-xl">Cascada de Grunas</h4>
+						<p>Una impresionante caída de agua de 30 metros, declarada monumento natural.</p>
+					</div>
+				</div>
+				<div class="flex items-start">
+					<Eye class="w-8 h-8 mr-4 text-terracotta" />
+					<div>
+						<h4 class="font-semibold text-xl">El Ojo Azul (Syri i Kaltër)</h4>
+						<p>Una piscina natural de aguas increíblemente azules y frías, formada por la erosión del río.</p>
+					</div>
+				</div>
+				<div class="flex items-start">
+					<Church class="w-8 h-8 mr-4 text-terracotta" />
+					<div>
+						<h4 class="font-semibold text-xl">Iglesia de Theth</h4>
+						<p>El icónico edificio de piedra del pueblo, una imagen clásica de los Alpes Albaneses.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
 </MainLayout>
+
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		const cards = document.querySelectorAll('.destination-card');
+		const detailsSections = document.querySelectorAll('.destination-details');
+
+		cards.forEach(card => {
+			card.addEventListener('click', () => {
+				const targetId = card.getAttribute('data-target');
+				const targetSection = document.getElementById(targetId);
+
+				// Ocultar todas las secciones de detalles
+				detailsSections.forEach(section => {
+					if (section.id !== targetId) {
+						section.classList.add('hidden');
+					}
+				});
+
+				// Mostrar u ocultar la sección clicada
+				if (targetSection) {
+					targetSection.classList.toggle('hidden');
+					// Hacer scroll hacia la sección de detalles
+					if (!targetSection.classList.contains('hidden')) {
+						targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+					}
+				}
+			});
+		});
+	});
+</script>
