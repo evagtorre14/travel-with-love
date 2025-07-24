@@ -1,0 +1,67 @@
+---
+// Este componente no necesita props por ahora
+---
+
+<div id="countdown-container" class="absolute top-24 right-5 bg-slate-gray/70 text-linen-white p-4 rounded-lg shadow-lg text-center z-10 backdrop-blur-sm">
+    <h3 class="text-lg font-semibold mb-2">Comienza la aventura en</h3>
+    <div class="flex justify-center gap-4 text-2xl font-semibold">
+        <div>
+            <span id="days" class="block">00</span>
+            <span class="text-xs font-normal">Días</span>
+        </div>
+        <div>
+            <span id="hours" class="block">00</span>
+            <span class="text-xs font-normal">Horas</span>
+        </div>
+        <div>
+            <span id="minutes" class="block">00</span>
+            <span class="text-xs font-normal">Minutos</span>
+        </div>
+        <div>
+            <span id="seconds" class="block">00</span>
+            <span class="text-xs font-normal">Segundos</span>
+        </div>
+    </div>
+</div>
+
+<script>
+    // Fecha de partida: 6 de Agosto del año actual a las 21:10
+    const getDepartureDate = () => {
+        const now = new Date();
+        const currentYear = now.getFullYear();
+        // Los meses en JavaScript son 0-indexados (Enero=0, Agosto=7)
+        return new Date(currentYear, 7, 6, 21, 10, 0).getTime();
+    };
+
+    const countdownDate = getDepartureDate();
+
+    const interval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const daysEl = document.getElementById("days");
+        const hoursEl = document.getElementById("hours");
+        const minutesEl = document.getElementById("minutes");
+        const secondsEl = document.getElementById("seconds");
+
+        if (daysEl && hoursEl && minutesEl && secondsEl) {
+            daysEl.textContent = String(days).padStart(2, '0');
+            hoursEl.textContent = String(hours).padStart(2, '0');
+            minutesEl.textContent = String(minutes).padStart(2, '0');
+            secondsEl.textContent = String(seconds).padStart(2, '0');
+        }
+
+        if (distance < 0) {
+            clearInterval(interval);
+            const container = document.getElementById("countdown-container");
+            if (container) {
+                container.innerHTML = "<div class='p-4 text-lg font-semibold'>¡La aventura ha comenzado!</div>";
+            }
+        }
+    }, 1000);
+</script>

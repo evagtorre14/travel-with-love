@@ -1,11 +1,13 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import { Plane, CalendarDays } from 'lucide-astro';
+import Countdown from '../components/Countdown.astro';
+import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain } from 'lucide-astro';
 ---
 
 <MainLayout title="Albania 2025">
 	<section class="relative h-screen">
 		<img src="/images/theth_albania.jpg" alt="Imagen de las montañas de Theth, Albania" class="w-full h-full object-cover">
+		<Countdown />
 		<div class="absolute inset-0 bg-slate-gray/50 flex flex-col justify-center items-center text-center">
 			<h1 class="text-6xl font-sans font-semibold text-linen-white">Albania 2025</h1>
 			<div class="flex items-center justify-center text-2xl text-linen-white mt-4">
@@ -18,12 +20,51 @@ import { Plane, CalendarDays } from 'lucide-astro';
 
 	<section id="itinerary" class="py-20 px-4">
 		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">Itinerario</h2>
-		<div class="space-y-8 max-w-4xl mx-auto">
-			<div class="flex items-start">
-				<Plane class="text-terracotta w-8 h-8 mr-4" fill="currentColor" />
-				<div>
-					<h3 class="text-2xl font-sans font-semibold text-slate-gray">Día 1: Llegada a Tirana</h3>
-					<p class="text-slate-gray">Llegada al aeropuerto, recogida del coche de alquiler y traslado al hotel.</p>
+		<div class="relative max-w-4xl mx-auto">
+			<!-- Línea de tiempo vertical -->
+			<div class="absolute left-8 top-0 h-full w-0.5 bg-terracotta/30"></div>
+
+			<!-- Día 1 -->
+			<div class="relative mb-12">
+				<div class="absolute left-0 top-2 w-16 h-16 bg-terracotta text-linen-white rounded-full flex items-center justify-center text-2xl font-semibold shadow-md">
+					1
+				</div>
+				<div class="ml-28 pl-8 border-l-4 border-terracotta/50 py-4">
+					<h3 class="text-3xl font-semibold text-slate-gray mb-4">Miércoles, 6 de Agosto</h3>
+					<div class="space-y-4">
+						<div class="flex items-center">
+							<Plane class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Llegada al Aeropuerto de Tirana (TIA) a las 00:20 (madrugada del día 7).</p>
+						</div>
+						<div class="flex items-center">
+							<Bed class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Noche en un alojamiento céntrico en Tirana.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Día 2 -->
+			<div class="relative mb-12">
+				<div class="absolute left-0 top-2 w-16 h-16 bg-terracotta text-linen-white rounded-full flex items-center justify-center text-2xl font-semibold shadow-md">
+					2
+				</div>
+				<div class="ml-28 pl-8 border-l-4 border-terracotta/50 py-4">
+					<h3 class="text-3xl font-semibold text-slate-gray mb-4">Jueves, 7 de Agosto</h3>
+					<div class="space-y-4">
+						<div class="flex items-center">
+							<Bus class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Por la mañana, viaje en autobús de Tirana a Shkodër.</p>
+						</div>
+						<div class="flex items-center">
+							<Footprints class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Día de exploración por Shkodër: el Castillo de Rozafa, el centro histórico...</p>
+						</div>
+						<div class="flex items-center">
+							<Mountain class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Al atardecer, traslado a Theth para adentrarnos en los Alpes Albaneses.</p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
