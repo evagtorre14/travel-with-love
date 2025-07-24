@@ -1,7 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import Countdown from '../components/Countdown.astro';
-import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain, Landmark, Castle, Camera, Moon, Church, Bike, Backpack, Sandwich, Droplets, Eye } from 'lucide-astro';
+import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain, Landmark, Castle, Camera, Moon, Church, Bike, Backpack, Sandwich, Droplets, Eye, CarFront, Star } from 'lucide-astro';
 ---
 
 <MainLayout title="Albania 2025">
@@ -54,7 +54,7 @@ import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain, Landmark, Castle, 
 					<div class="space-y-4">
 						<div class="flex items-center">
 							<Bus class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Por la mañana, viaje en autobús de Tirana a Shkodër (duración aproximada: 2 horas).</p>
+							<p class="text-slate-gray">Por la mañana, viaje en autobús de Tirana a <a href="#" data-destination-link="shkoder-details" class="text-terracotta font-semibold hover:underline">Shkodër</a> (duración aproximada: 2 horas).</p>
 						</div>
 						<div class="flex items-center">
 							<Footprints class="w-6 h-6 mr-4 text-terracotta" />
@@ -62,7 +62,7 @@ import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain, Landmark, Castle, 
 						</div>
 						<div class="flex items-center">
 							<Mountain class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Al atardecer, traslado a Theth para adentrarnos en los Alpes Albaneses.</p>
+							<p class="text-slate-gray">Al atardecer, traslado a <a href="#" data-destination-link="theth-details" class="text-terracotta font-semibold hover:underline">Theth</a> para adentrarnos en los Alpes Albaneses.</p>
 						</div>
 						<div class="flex items-center">
 							<Bed class="w-6 h-6 mr-4 text-terracotta" />
@@ -82,7 +82,7 @@ import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain, Landmark, Castle, 
 					<div class="space-y-4">
 						<div class="flex items-start">
 							<Backpack class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Día de trekking. Madrugaremos para hacer la espectacular ruta desde Theth hasta el Paso de Valbona, el punto más alto y con las mejores vistas del recorrido.</p>
+							<p class="text-slate-gray">Día de trekking. Madrugaremos para hacer la espectacular ruta desde <a href="#" data-destination-link="theth-details" class="text-terracotta font-semibold hover:underline">Theth</a> hasta el Paso de Valbona, el punto más alto y con las mejores vistas del recorrido.</p>
 						</div>
 						<div class="flex items-start">
 							<Sandwich class="w-6 h-6 mr-4 text-terracotta" />
@@ -95,6 +95,42 @@ import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain, Landmark, Castle, 
 						<div class="flex items-start">
 							<Bed class="w-6 h-6 mr-4 text-terracotta" />
 							<p class="text-slate-gray">Segunda noche en Theth.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Día 4 -->
+			<div class="relative mb-12">
+				<div class="absolute left-0 top-2 w-16 h-16 bg-terracotta text-linen-white rounded-full flex items-center justify-center text-2xl font-semibold shadow-md">
+					4
+				</div>
+				<div class="ml-28 pl-8 border-l-4 border-terracotta/50 py-4">
+					<h3 class="text-3xl font-semibold text-slate-gray mb-4">Sábado, 9 de Agosto</h3>
+					<div class="space-y-4">
+						<div class="flex items-start">
+							<Droplets class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Día de exploración de las joyas de Theth. El plan es visitar la Cascada de Grunas y el famoso Ojo Azul.</p>
+						</div>
+						<div class="border-l-2 border-terracotta/50 pl-6 ml-2 mt-4 space-y-4">
+							<h4 class="font-semibold text-lg text-slate-gray">Opción A: La Aventura Completa</h4>
+							<div class="flex items-start">
+								<Backpack class="w-6 h-6 mr-4 text-terracotta flex-shrink-0" />
+								<p class="text-slate-gray">Ruta de senderismo completa (ida y vuelta) de unos 18-20 km (7-8 horas). El itinerario sería: Theth → Cascada de Grunas → Ojo Azul → Theth.</p>
+							</div>
+							<h4 class="font-semibold text-lg text-slate-gray">Opción B: Aventura y Relax</h4>
+							<div class="flex items-start">
+								<CarFront class="w-6 h-6 mr-4 text-terracotta flex-shrink-0" />
+								<p class="text-slate-gray">Hacer la ruta de ida a pie y organizar un transporte (taxi 4x4) desde Nderlysaj (cerca del Ojo Azul) para la vuelta a Theth.</p>
+							</div>
+						</div>
+						<div class="flex items-start mt-4">
+							<Star class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Por la noche, disfrutar del cielo estrellado de los Alpes, lejos de la contaminación lumínica.</p>
+						</div>
+						<div class="flex items-start mt-4">
+							<Bed class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Tercera y última noche en Theth.</p>
 						</div>
 					</div>
 				</div>
@@ -223,27 +259,36 @@ import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain, Landmark, Castle, 
 	document.addEventListener('DOMContentLoaded', () => {
 		const cards = document.querySelectorAll('.destination-card');
 		const detailsSections = document.querySelectorAll('.destination-details');
+		const destinationLinks = document.querySelectorAll('[data-destination-link]');
+
+		const openDetailsSection = (targetId) => {
+			const targetSection = document.getElementById(targetId);
+			if (!targetSection) return;
+
+			// Ocultar todas las demás secciones de detalles
+			detailsSections.forEach(section => {
+				if (section.id !== targetId) {
+					section.classList.add('hidden');
+				}
+			});
+
+			// Mostrar la sección objetivo y hacer scroll
+			targetSection.classList.remove('hidden');
+			targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+		};
 
 		cards.forEach(card => {
 			card.addEventListener('click', () => {
 				const targetId = card.getAttribute('data-target');
-				const targetSection = document.getElementById(targetId);
+				openDetailsSection(targetId);
+			});
+		});
 
-				// Ocultar todas las secciones de detalles
-				detailsSections.forEach(section => {
-					if (section.id !== targetId) {
-						section.classList.add('hidden');
-					}
-				});
-
-				// Mostrar u ocultar la sección clicada
-				if (targetSection) {
-					targetSection.classList.toggle('hidden');
-					// Hacer scroll hacia la sección de detalles
-					if (!targetSection.classList.contains('hidden')) {
-						targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-					}
-				}
+		destinationLinks.forEach(link => {
+			link.addEventListener('click', (e) => {
+				e.preventDefault();
+				const targetId = link.getAttribute('data-destination-link');
+				openDetailsSection(targetId);
 			});
 		});
 	});
