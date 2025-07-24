@@ -2,11 +2,17 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import Countdown from '../components/Countdown.astro';
 import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain, Landmark, Castle, Camera, Moon, Church, Bike, Backpack, Sandwich, Droplets, Eye, CarFront, Star, Ship, Waves, Sun, Search, Sailboat } from 'lucide-astro';
+
+// Importamos las imágenes
+import heroImage from '../assets/theth_albania.jpg';
+import shkoderImage from '../assets/shkoder.jpg';
+import beratImage from '../assets/berat.jpg';
+import thethImage from '../assets/theth_albania.jpg';
 ---
 
 <MainLayout title="Albania 2025">
 	<section class="relative h-screen">
-		<img src="/images/theth_albania.jpg" alt="Imagen de las montañas de Theth, Albania" class="w-full h-full object-cover">
+		<img src={heroImage.src} alt="Imagen de las montañas de Theth, Albania" class="w-full h-full object-cover">
 		<Countdown />
 		<div class="absolute inset-0 bg-slate-gray/50 flex flex-col justify-center items-center text-center">
 			<h1 class="text-6xl font-sans font-semibold text-linen-white">Albania 2025</h1>
@@ -270,21 +276,21 @@ import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain, Landmark, Castle, 
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
 			<!-- Card de Shkodër -->
 			<div class="destination-card relative rounded-lg overflow-hidden shadow-lg cursor-pointer group" data-target="shkoder-details">
-				<img src="/images/shkoder.jpg" alt="Imagen de Shkodër" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+				<img src={shkoderImage.src} alt="Imagen de Shkodër" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
 				<div class="absolute inset-0 bg-slate-gray/60 flex items-center justify-center">
 					<h3 class="text-3xl font-semibold text-linen-white">Shkodër</h3>
 				</div>
 			</div>
 			<!-- Card de Theth -->
 			<div class="destination-card relative rounded-lg overflow-hidden shadow-lg cursor-pointer group" data-target="theth-details">
-				<img src="/images/theth_albania.jpg" alt="Imagen de Theth" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+				<img src={thethImage.src} alt="Imagen de Theth" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
 				<div class="absolute inset-0 bg-slate-gray/60 flex items-center justify-center">
 					<h3 class="text-3xl font-semibold text-linen-white">Theth</h3>
 				</div>
 			</div>
 			<!-- Card de Berat -->
 			<div class="destination-card relative rounded-lg overflow-hidden shadow-lg cursor-pointer group" data-target="berat-details">
-				<img src="/images/berat.jpg" alt="Imagen de las casas otomanas de Berat" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+				<img src={beratImage.src} alt="Imagen de las casas otomanas de Berat" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
 				<div class="absolute inset-0 bg-slate-gray/60 flex items-center justify-center">
 					<h3 class="text-3xl font-semibold text-linen-white">Berat</h3>
 				</div>
