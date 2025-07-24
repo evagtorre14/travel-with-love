@@ -1,33 +1,50 @@
 name: Deploy to GitHub Pages
 
+# This workflow is triggered on pushes to the branch named `main`
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
+
+# Defines two custom environment variables for the workflow. These are used for the deployment URL.
+# It is recommended to leave these as is.
+env:
+  BUILD_PATH: "."
+
+# Specifies the permissions the workflow needs to deploy to GitHub Pages.
+permissions:
+  contents: read
+  pages: write      # to deploy to Pages
+  id-token: write   # to verify the deployment originates from an appropriate source
 
 jobs:
-  build-and-deploy:
+  build:
+    name: Build
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out repository
-        uses: actions/checkout@v3
+      - name: Checkout your repository
+        uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '22' # O la versión que estés usando
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build project
-        run: npm run build
+      - name: Install and build
+        run: |
+          npm install
+          npm run build
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
+deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
