@@ -11,6 +11,14 @@ import thethImage from '../assets/theth_albania.jpg';
 import rivieraImage from '../assets/RivieraAlbanesa.jpg';
 import karaburunImage from '../assets/karaburun.jpeg';
 import gjirokasterImage from '../assets/gjirokaster.jpg';
+import taveKosiImage from '../assets/tave_kosi.jpg';
+import byrekImage from '../assets/byrek.jpeg';
+import fergeseImage from '../assets/fergese.jpg';
+import qofteImage from '../assets/qofte.webp';
+import specaImage from '../assets/speca.webp';
+import qifqiImage from '../assets/qifqi.jpg';
+import trileceImage from '../assets/trilece.jpg';
+import kadaifImage from '../assets/kadaif.jpg';
 ---
 
 <MainLayout title="Albania 2025">
@@ -41,7 +49,7 @@ import gjirokasterImage from '../assets/gjirokaster.jpg';
 				<div class="ml-28 pl-8 border-l-4 border-terracotta/50 py-4">
 					<h3 class="text-3xl font-semibold text-slate-gray mb-4">Miércoles, 6 de Agosto</h3>
 					<div class="space-y-4">
-						<div class="flex items-center">
+						<div class_="flex items-center">
 							<Plane class="w-6 h-6 mr-4 text-terracotta" />
 							<p class="text-slate-gray">Llegada al Aeropuerto de Tirana (TIA) a las 00:20 (madrugada del día 7).</p>
 						</div>
@@ -271,7 +279,7 @@ import gjirokasterImage from '../assets/gjirokaster.jpg';
 						</div>
 						<div class="flex items-start">
 							<Castle class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Visita al Castillo de Gjirokastër, el bazar y las casas otomanas.</p>
+							<p class="text-slate-gray">Visita al Castillo de Gjirokastër, el bazar y las casas otomanas, con la posibilidad de hacer un free tour.</p>
 						</div>
 						<div class="flex items-start">
 							<Bed class="w-6 h-6 mr-4 text-terracotta" />
@@ -280,20 +288,6 @@ import gjirokasterImage from '../assets/gjirokaster.jpg';
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-
-	<section id="lodging" class="py-20 px-4 bg-alpine-green text-linen-white">
-		<h2 class="text-4xl font-sans font-semibold text-center mb-12">Alojamientos</h2>
-		<div class="max-w-4xl mx-auto">
-			<p>Aquí se mostrará la información de los alojamientos.</p>
-		</div>
-	</section>
-
-	<section id="restaurants" class="py-20 px-4">
-		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">Restaurantes</h2>
-		<div class="max-w-4xl mx-auto">
-			<p>Aquí se mostrará la información de los restaurantes.</p>
 		</div>
 	</section>
 
@@ -344,6 +338,90 @@ import gjirokasterImage from '../assets/gjirokaster.jpg';
 				</div>
 			</div>
 			<!-- Aquí se añadirán más cards -->
+		</div>
+	</section>
+
+	<section id="activities" class="py-20 px-4 bg-alpine-green text-linen-white">
+		<h2 class="text-4xl font-sans font-semibold text-center mb-12">Actividades</h2>
+		<div class="max-w-4xl mx-auto">
+			<p>Aquí se mostrará la información de las actividades.</p>
+		</div>
+	</section>
+
+	<section id="restaurants" class="py-20 px-4">
+		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">Restaurantes</h2>
+		<div class="max-w-4xl mx-auto">
+			<p>Aquí se mostrará la información de los restaurantes.</p>
+		</div>
+	</section>
+
+	<section id="sabores" class="py-20 px-4 bg-linen-white">
+		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">Sabores de Albania</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+			<!-- Card de Tavë Kosi -->
+			<div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
+				<img src={taveKosiImage.src} alt="Imagen de Tavë Kosi" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+				<div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
+					<h3 class="text-2xl font-semibold text-linen-white">Tavë Kosi</h3>
+					<p class="text-linen-white mt-2">Cordero asado con arroz en una cremosa salsa de yogur.</p>
+				</div>
+			</div>
+			<!-- Card de Byrek -->
+			<div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
+				<img src={byrekImage.src} alt="Imagen de Byrek" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+				<div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
+					<h3 class="text-2xl font-semibold text-linen-white">Byrek</h3>
+					<p class="text-linen-white mt-2">Pastel de hojaldre salado relleno de espinacas, queso o carne.</p>
+				</div>
+			</div>
+			<!-- Card de Fërgesë -->
+			<div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
+				<img src={fergeseImage.src} alt="Imagen de Fërgesë" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+				<div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
+					<h3 class="text-2xl font-semibold text-linen-white">Fërgesë</h3>
+					<p class="text-linen-white mt-2">Pimientos, tomates y requesón, a menudo con carne.</p>
+				</div>
+			</div>
+			<!-- Card de Qofte -->
+			<div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
+				<img src={qofteImage.src} alt="Imagen de Qofte" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+				<div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
+					<h3 class="text-2xl font-semibold text-linen-white">Qofte</h3>
+					<p class="text-linen-white mt-2">Albóndigas de cordero o ternera sazonadas con hierbas.</p>
+				</div>
+			</div>
+			<!-- Card de Speca të Mbushura -->
+			<div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
+				<img src={specaImage.src} alt="Imagen de Speca të Mbushura" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+				<div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
+					<h3 class="text-2xl font-semibold text-linen-white">Speca të Mbushura</h3>
+					<p class="text-linen-white mt-2">Pimientos rellenos de arroz, carne picada y especias.</p>
+				</div>
+			</div>
+			<!-- Card de Qifqi -->
+			<div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
+				<img src={qifqiImage.src} alt="Imagen de Qifqi" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+				<div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
+					<h3 class="text-2xl font-semibold text-linen-white">Qifqi</h3>
+					<p class="text-linen-white mt-2">Bolas de arroz con menta, especialidad de Gjirokastër.</p>
+				</div>
+			</div>
+			<!-- Card de Trileçe -->
+			<div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
+				<img src={trileceImage.src} alt="Imagen de Trileçe" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+				<div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
+					<h3 class="text-2xl font-semibold text-linen-white">Trileçe</h3>
+					<p class="text-linen-white mt-2">Bizcocho bañado en tres tipos de leche, cubierto de caramelo.</p>
+				</div>
+			</div>
+			<!-- Card de Kadaif -->
+			<div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
+				<img src={kadaifImage.src} alt="Imagen de Kadaif" class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+				<div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
+					<h3 class="text-2xl font-semibold text-linen-white">Kadaif</h3>
+					<p class="text-linen-white mt-2">Fideos finos horneados con nueces y almíbar.</p>
+				</div>
+			</div>
 		</div>
 	</section>
 
