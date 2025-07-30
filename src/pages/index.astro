@@ -19,6 +19,7 @@ import specaImage from '../assets/speca.webp';
 import qifqiImage from '../assets/qifqi.jpg';
 import trileceImage from '../assets/trilece.jpg';
 import kadaifImage from '../assets/kadaif.jpg';
+import Activity from '../components/Activity.astro';
 ---
 
 <MainLayout title="Albania 2025">
@@ -49,12 +50,12 @@ import kadaifImage from '../assets/kadaif.jpg';
 				<div class="ml-28 pl-8 border-l-4 border-terracotta/50 py-4">
 					<h3 class="text-3xl font-semibold text-slate-gray mb-4">Miércoles, 6 de Agosto</h3>
 					<div class="space-y-4">
-						<div class_="flex items-center">
-							<Plane class="w-6 h-6 mr-4 text-terracotta" />
+						<div class="flex items-start">
+							<Plane class="w-6 h-6 mr-4 text-terracotta flex-shrink-0" />
 							<p class="text-slate-gray">Llegada al Aeropuerto de Tirana (TIA) a las 00:20 (madrugada del día 7).</p>
 						</div>
-						<div class="flex items-center">
-							<Bed class="w-6 h-6 mr-4 text-terracotta" />
+						<div class="flex items-start">
+							<Bed class="w-6 h-6 mr-4 text-terracotta flex-shrink-0" />
 							<p class="text-slate-gray">Noche en un alojamiento céntrico en Tirana.</p>
 						</div>
 					</div>
@@ -342,11 +343,39 @@ import kadaifImage from '../assets/kadaif.jpg';
 	</section>
 
 	<section id="activities" class="py-20 px-4 bg-alpine-green text-linen-white">
-		<h2 class="text-4xl font-sans font-semibold text-center mb-12">Actividades</h2>
-		<div class="max-w-4xl mx-auto">
-			<p>Aquí se mostrará la información de las actividades.</p>
+		<h2 class="text-4xl font-bold text-center mb-12">
+			Actividades Posibles
+		  </h2>
+		<div class="max-w-6xl mx-auto">
+		  <div class="flex flex-col gap-16">
+			<Activity
+			  title="Lancha y Snorkel en la Península de Karaburun"
+			  imageSrc={karaburunImage}
+			  imageAlt="Vista de la costa de la Península de Karaburun desde una lancha"
+			>
+			  <p class="mb-6">
+				Exploraremos la costa virgen de Karaburun, descubriremos cuevas marinas y haremos snorkel en sus aguas cristalinas. Una aventura acuática inolvidable.
+			  </p>
+			  <a href="https://www.getyourguide.es/-l185327/-tc57/?cq_src=google_ads&cq_cmp=21875602731&cq_con=&cq_term=&cq_med=&cq_plac=&cq_net=x&cq_pos=&cq_plt=gp&campaign_id=21875602731&adgroup_id=&target_id=&loc_physical_ms=9047045&match_type=&ad_id=&keyword=&ad_position=&feed_item_id=&placement=&device=c&partner_id=CD951&gad_source=1&gad_campaignid=21882081785&gbraid=0AAAAADmzJCM8StYzFLoAI5ANwjj8e9Vhu&gclid=Cj0KCQjwhafEBhCcARIsAEGZEKKZQqr7A9wzHA_FflDfilfINa76wLzUtTRv6P6u6WS4ymEv6fD5lDIaAh11EALw_wcB" target="_blank" rel="noopener noreferrer" class="inline-block bg-terracotta text-linen-white font-bold py-3 px-6 rounded-lg hover:bg-terracotta/90 transition-colors duration-300 no-underline">
+				Opciones
+			  </a>
+			</A>
+			<Activity
+			  title="La ruta de Theth al Paso de Valbona"
+			  imageSrc={thethImage}
+			  imageAlt="Paisaje montañoso de Theth con la iglesia al fondo"
+			  reverse={true}
+			>
+			  <p class="mb-6">
+				Haremos una de las rutas de senderismo más espectaculares de los Balcanes: de Theth al paso de Valbona, el punto más alto, y vuelta. Disfrutaremos de vistas panorámicas que nos dejarán sin aliento, prados alpinos y la hospitalidad de los montañeses.
+			  </p>
+			  <a href="https://es.wikiloc.com/rutas-senderismo/theth-valbona-pass-80493512" target="_blank" rel="noopener noreferrer" class="inline-block bg-terracotta text-linen-white font-bold py-3 px-6 rounded-lg hover:bg-terracotta/90 transition-colors duration-300 no-underline">
+				Ver Ruta
+			  </a>
+			</Activity>
+		  </div>
 		</div>
-	</section>
+	  </section>
 
 	<section id="restaurants" class="py-20 px-4">
 		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">Restaurantes</h2>
