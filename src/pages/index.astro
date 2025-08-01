@@ -656,12 +656,62 @@ import Activity from '../components/Activity.astro';
 		</div>
 	  </section>
 
-	<section id="restaurants" class="py-20 px-4">
-		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">Restaurantes</h2>
-		<div class="max-w-4xl mx-auto">
-			<p>Aquí se mostrará la información de los restaurantes.</p>
+	<section id="restaurants" class="py-20 px-4 bg-white">
+		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">
+		  Gastronomía Local: Dónde Comer
+		</h2>
+		<div class="max-w-4xl mx-auto" id="restaurants-accordion">
+	  
+		  <!-- Desplegable para Tirana -->
+		  <div class="border-t border-terracotta/30">
+			<button class="accordion-header flex justify-between items-center w-full py-5 text-left">
+			  <span class="text-2xl font-semibold text-slate-gray">Tirana</span>
+			  <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+			</button>
+			<div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+			  <div class="p-5 pt-0">
+				<div class="space-y-4">
+				  <!-- A la espera de la lista de restaurantes -->
+				  <p class="text-slate-gray">Próximamente...</p>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	  
+		  <!-- Desplegable para Berat -->
+		  <div class="border-y border-terracotta/30">
+			<button class="accordion-header flex justify-between items-center w-full py-5 text-left">
+			  <span class="text-2xl font-semibold text-slate-gray">Berat</span>
+			  <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+			</button>
+			<div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+			  <div class="p-5 pt-0">
+				<div class="space-y-4">
+				  <div class="flex justify-between items-center py-3 border-b border-slate-200">
+					<h4 class="text-xl text-slate-gray">Casa Eni</h4>
+					<a href="https://maps.app.goo.gl/Cbiov6g2F5Y8aDLn8" target="_blank" rel="noopener noreferrer" class="text-terracotta font-semibold hover:underline whitespace-nowrap">
+					  Ver en Mapa &rarr;
+					</a>
+				  </div>
+				  <div class="flex justify-between items-center py-3 border-b border-slate-200">
+					<h4 class="text-xl text-slate-gray">Temi</h4>
+					<a href="https://maps.app.goo.gl/byqeATnTStAijjpr7" target="_blank" rel="noopener noreferrer" class="text-terracotta font-semibold hover:underline whitespace-nowrap">
+					  Ver en Mapa &rarr;
+					</a>
+				  </div>
+				  <div class="flex justify-between items-center py-3">
+					<h4 class="text-xl text-slate-gray">Lili</h4>
+					<a href="https://maps.app.goo.gl/hrSM62NtMBxuXRY67" target="_blank" rel="noopener noreferrer" class="text-terracotta font-semibold hover:underline whitespace-nowrap">
+					  Ver en Mapa &rarr;
+					</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+	  
 		</div>
-	</section>
+	  </section>
 
 	<section id="sabores" class="py-20 px-4 bg-linen-white">
 		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">Sabores de Albania</h2>
@@ -844,23 +894,42 @@ import Activity from '../components/Activity.astro';
 			});
 		});
 
-        document.querySelectorAll('.accordion-header').forEach(button => {
-            button.addEventListener('click', () => {
-                const accordionContent = button.nextElementSibling as HTMLElement;
-                const accordionIcon = button.querySelector('svg') as SVGElement;
+		document.querySelectorAll('#info-accordion .accordion-header').forEach(button => {
+			button.addEventListener('click', () => {
+				const accordionContent = button.nextElementSibling as HTMLElement;
+				const accordionIcon = button.querySelector('svg') as SVGElement;
 
-                if (accordionContent && accordionIcon) {
-                    button.classList.toggle('active');
+				if (accordionContent && accordionIcon) {
+					button.classList.toggle('active');
 
-                    if (button.classList.contains('active')) {
-                        accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
-                        accordionIcon.style.transform = 'rotate(90deg)';
-                    } else {
-                        accordionContent.style.maxHeight = '0px';
-                        accordionIcon.style.transform = 'rotate(0deg)';
-                    }
-                }
-            });
-        });
+					if (button.classList.contains('active')) {
+						accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+						accordionIcon.style.transform = 'rotate(90deg)';
+					} else {
+						accordionContent.style.maxHeight = '0px';
+						accordionIcon.style.transform = 'rotate(0deg)';
+					}
+				}
+			});
+		});
+
+		document.querySelectorAll('#restaurants-accordion .accordion-header').forEach(button => {
+			button.addEventListener('click', () => {
+				const accordionContent = button.nextElementSibling as HTMLElement;
+				const accordionIcon = button.querySelector('svg') as SVGElement;
+
+				if (accordionContent && accordionIcon) {
+					button.classList.toggle('active');
+
+					if (button.classList.contains('active')) {
+						accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px';
+						accordionIcon.style.transform = 'rotate(180deg)';
+					} else {
+						accordionContent.style.maxHeight = '0px';
+						accordionIcon.style.transform = 'rotate(0deg)';
+					}
+				}
+			});
+		});
 	});
 </script>
