@@ -21,6 +21,7 @@ import trileceImage from '../assets/trilece.jpg';
 import kadaifImage from '../assets/kadaif.jpg';
 import vinoImage from '../assets/vino.jpg';
 import kayak3Image from '../assets/kayak3.jpg';
+import blueEyeImage from '../assets/blue_eye.jpg';
 import Activity from '../components/Activity.astro';
 import WeatherSection from '../components/WeatherSection.astro';
 ---
@@ -73,20 +74,16 @@ import WeatherSection from '../components/WeatherSection.astro';
 				<div class="ml-28 pl-8 border-l-4 border-terracotta/50 py-4">
 					<h3 class="text-3xl font-semibold text-slate-gray mb-4">Jueves, 7 de Agosto</h3>
 					<div class="space-y-4">
-						<div class="flex items-center">
-							<Bus class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Por la mañana, viaje en autobús de Tirana a <a href="#" data-destination-link="shkoder-details" class="text-terracotta font-semibold hover:underline">Shkodër</a> (duración aproximada: 2 horas).</p>
+						<div class="flex items-start">
+							<Bus class="w-6 h-6 mr-4 text-terracotta flex-shrink-0" />
+							<p class="text-slate-gray">Viaje en autobús de Tirana (salida 10:30) a <a href="#" data-destination-link="theth-details" class="text-terracotta font-semibold hover:underline">Theth</a> (llegada 16:00).</p>
 						</div>
-						<div class="flex items-center">
-							<Footprints class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Día de exploración por Shkodër: el Castillo de Rozafa, el centro histórico...</p>
+						<div class="flex items-start">
+							<Footprints class="w-6 h-6 mr-4 text-terracotta flex-shrink-0" />
+							<p class="text-slate-gray">Tarde para explorar el pueblo de Theth, visitar la iglesia y la torre de aislamiento (Kulla e Ngujimit).</p>
 						</div>
-						<div class="flex items-center">
-							<Mountain class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Al atardecer, traslado a <a href="#" data-destination-link="theth-details" class="text-terracotta font-semibold hover:underline">Theth</a> para adentrarnos en los Alpes Albaneses.</p>
-						</div>
-						<div class="flex items-center">
-							<Bed class="w-6 h-6 mr-4 text-terracotta" />
+						<div class="flex items-start">
+							<Bed class="w-6 h-6 mr-4 text-terracotta flex-shrink-0" />
 							<p class="text-slate-gray">Noche en Theth, rodeadas de montañas.</p>
 						</div>
 					</div>
@@ -292,6 +289,70 @@ import WeatherSection from '../components/WeatherSection.astro';
 					</div>
 				</div>
 			</div>
+
+			<!-- Día 10 -->
+			<div class="relative mb-12">
+				<div class="absolute left-0 top-2 w-16 h-16 bg-terracotta text-linen-white rounded-full flex items-center justify-center text-2xl font-semibold shadow-md">
+					10
+				</div>
+				<div class="ml-28 pl-8 border-l-4 border-terracotta/50 py-4">
+					<h3 class="text-3xl font-semibold text-slate-gray mb-4">Viernes, 15 de Agosto</h3>
+					<div class="space-y-4">
+						<div class="flex items-start">
+							<Bus class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Viaje de Gjirokastër a Tirana (aprox. 3.5 horas).</p>
+						</div>
+						<div class="flex items-start">
+							<CarFront class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Devolución del coche de alquiler en Tirana.</p>
+						</div>
+						<div class="flex items-start">
+							<Footprints class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Tarde para hacer un free tour por Tirana y descubrir la capital.</p>
+						</div>
+						<div class="flex items-start">
+							<Bed class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Noche en Tirana.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Día 11 -->
+			<div class="relative mb-12">
+				<div class="absolute left-0 top-2 w-16 h-16 bg-terracotta text-linen-white rounded-full flex items-center justify-center text-2xl font-semibold shadow-md">
+					11
+				</div>
+				<div class="ml-28 pl-8 border-l-4 border-terracotta/50 py-4">
+					<h3 class="text-3xl font-semibold text-slate-gray mb-4">Sábado, 16 de Agosto</h3>
+					<div class="space-y-4">
+						<div class="flex items-start">
+							<Search class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Día libre por Tirana o día de reajuste para el itinerario.</p>
+						</div>
+						<div class="flex items-start">
+							<Bed class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Noche en Tirana.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Día 12 -->
+			<div class="relative mb-12">
+				<div class="absolute left-0 top-2 w-16 h-16 bg-terracotta text-linen-white rounded-full flex items-center justify-center text-2xl font-semibold shadow-md">
+					12
+				</div>
+				<div class="ml-28 pl-8 border-l-4 border-terracotta/50 py-4">
+					<h3 class="text-3xl font-semibold text-slate-gray mb-4">Domingo, 17 de Agosto</h3>
+					<div class="space-y-4">
+						<div class="flex items-start">
+							<Plane class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Vuelo de vuelta a Madrid desde Tirana (TIA) a las 17:40.</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -419,6 +480,13 @@ import WeatherSection from '../components/WeatherSection.astro';
 					<div>
 						<h4 class="font-semibold text-xl">Iglesia de Theth</h4>
 						<p>El icónico edificio de piedra del pueblo, una imagen clásica de los Alpes Albaneses.</p>
+					</div>
+				</div>
+				<div class="flex items-start">
+					<Landmark class="w-8 h-8 mr-4 text-terracotta" />
+					<div>
+						<h4 class="font-semibold text-xl">Torre de Aislamiento (Kulla e Ngujimit)</h4>
+						<p>Una torre de piedra utilizada históricamente para proteger a los hombres en disputas de sangre.</p>
 					</div>
 				</div>
 			</div>
@@ -596,12 +664,24 @@ import WeatherSection from '../components/WeatherSection.astro';
 			  title="La ruta de Theth al Paso de Valbona"
 			  imageSrc={thethImage}
 			  imageAlt="Paisaje montañoso de Theth con la iglesia al fondo"
-			  reverse={true}
 			>
 			  <p class="mb-6">
 				Haremos una de las rutas de senderismo más espectaculares de los Balcanes: de Theth al paso de Valbona, el punto más alto, y vuelta. Disfrutaremos de vistas panorámicas que nos dejarán sin aliento, prados alpinos y la hospitalidad de los montañeses.
 			  </p>
 			  <a href="https://es.wikiloc.com/rutas-senderismo/theth-valbona-pass-80493512" target="_blank" rel="noopener noreferrer" class="inline-block bg-terracotta text-linen-white font-bold py-3 px-6 rounded-lg hover:bg-terracotta/90 transition-colors duration-300 no-underline">
+				Ver Ruta
+			  </a>
+			</Activity>
+			<Activity
+			  title="La ruta de Theth al Blue Eye pasando por la cascada de Grunas"
+			  imageSrc={blueEyeImage}
+			  imageAlt="El Ojo Azul (Blue Eye) de Theth"
+			  reverse={true}
+			>
+			  <p class="mb-6">
+				Una ruta impresionante que nos llevará a dos de las joyas naturales de Theth: la cascada de Grunas y el Ojo Azul. Un recorrido perfecto para un día de aventura y naturaleza.
+			  </p>
+			  <a href="https://es.wikiloc.com/rutas-senderismo/de-theth-a-the-blue-eye-pasando-por-la-cascada-de-grunas-tambien-conocida-como-ujevara-e-grunasit-o-189022446" target="_blank" rel="noopener noreferrer" class="inline-block bg-terracotta text-linen-white font-bold py-3 px-6 rounded-lg hover:bg-terracotta/90 transition-colors duration-300 no-underline">
 				Ver Ruta
 			  </a>
 			</Activity>
@@ -659,7 +739,7 @@ import WeatherSection from '../components/WeatherSection.astro';
 
 	<section id="restaurants" class="py-20 px-4 bg-white">
 		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">
-		  Gastronomía Local: Dónde Comer
+		  Gastronomía Local: Dónde Comer y Beber
 		</h2>
 		<div class="max-w-4xl mx-auto" id="restaurants-accordion">
 	  
@@ -672,8 +752,42 @@ import WeatherSection from '../components/WeatherSection.astro';
 			<div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
 			  <div class="p-5 pt-0">
 				<div class="space-y-4">
-				  <!-- A la espera de la lista de restaurantes -->
-				  <p class="text-slate-gray">Próximamente...</p>
+				  <div class="flex justify-between items-center py-3 border-b border-slate-200">
+					<div>
+						<h4 class="text-xl text-slate-gray">Hemingway Bar</h4>
+						<p class="text-slate-gray">Bar con ambiente bohemio, música jazz en directo y una gran selección de rones.</p>
+					</div>
+					<a href="https://maps.app.goo.gl/8z4Vw4z2Y4ZtHqfW8" target="_blank" rel="noopener noreferrer" class="text-terracotta font-semibold hover:underline whitespace-nowrap ml-4">
+					  Ver en Mapa &rarr;
+					</a>
+				  </div>
+				  <div class="flex justify-between items-center py-3 border-b border-slate-200">
+				  	<div>
+						<h4 class="text-xl text-slate-gray">Destil Creative Hub</h4>
+						<p class="text-slate-gray">Espacio creativo con bar, galería de arte y un ambiente alternativo.</p>
+					</div>
+					<a href="https://maps.app.goo.gl/utkzJxB4BWGEE1gRA" target="_blank" rel="noopener noreferrer" class="text-terracotta font-semibold hover:underline whitespace-nowrap ml-4">
+					  Ver en Mapa &rarr;
+					</a>
+				  </div>
+                  <div class="flex justify-between items-center py-3 border-b border-slate-200">
+                    <div>
+                        <h4 class="text-xl text-slate-gray">Radio Bar</h4>
+                        <p class="text-slate-gray">Un bar de estilo retro con una decoración única llena de radios antiguas y objetos vintage. Ofrece cócteles excelentes y un ambiente muy animado.</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/6fA5Q4qJ4ZtHqfW9" target="_blank" rel="noopener noreferrer" class="text-terracotta font-semibold hover:underline whitespace-nowrap ml-4">
+                      Ver en Mapa &rarr;
+                    </a>
+                  </div>
+                  <div class="flex justify-between items-center py-3 border-b border-slate-200">
+                    <div>
+                        <h4 class="text-xl text-slate-gray">Nouvelle Vague Tirana</h4>
+                        <p class="text-slate-gray">Un local acogedor y vibrante, conocido por su ambiente inclusivo y gay friendly. Ideal para disfrutar de buena música y cócteles.</p>
+                    </div>
+                    <a href="https://maps.app.goo.gl/N3s4r5tJ4ZtHqfW8" target="_blank" rel="noopener noreferrer" class="text-terracotta font-semibold hover:underline whitespace-nowrap ml-4">
+                      Ver en Mapa &rarr;
+                    </a>
+                  </div>
 				</div>
 			  </div>
 			</div>
@@ -689,19 +803,28 @@ import WeatherSection from '../components/WeatherSection.astro';
 			  <div class="p-5 pt-0">
 				<div class="space-y-4">
 				  <div class="flex justify-between items-center py-3 border-b border-slate-200">
-					<h4 class="text-xl text-slate-gray">Casa Eni</h4>
+					<div>
+						<h4 class="text-xl text-slate-gray">Casa Eni</h4>
+						<p class="text-slate-gray">Restaurante familiar en el barrio de Gorica, conocido por su ambiente acogedor y su deliciosa comida tradicional albanesa.</p>
+					</div>
 					<a href="https://maps.app.goo.gl/Cbiov6g2F5Y8aDLn8" target="_blank" rel="noopener noreferrer" class="text-terracotta font-semibold hover:underline whitespace-nowrap">
 					  Ver en Mapa &rarr;
 					</a>
 				  </div>
 				  <div class="flex justify-between items-center py-3 border-b border-slate-200">
-					<h4 class="text-xl text-slate-gray">Temi</h4>
+					<div>
+						<h4 class="text-xl text-slate-gray">Temi</h4>
+						<p class="text-slate-gray">Ubicado dentro del Castillo de Berat, este restaurante ofrece comida casera auténtica en un ambiente íntimo con vistas espectaculares.</p>
+					</div>
 					<a href="https://maps.app.goo.gl/byqeATnTStAijjpr7" target="_blank" rel="noopener noreferrer" class="text-terracotta font-semibold hover:underline whitespace-nowrap">
 					  Ver en Mapa &rarr;
 					</a>
 				  </div>
 				  <div class="flex justify-between items-center py-3">
-					<h4 class="text-xl text-slate-gray">Lili</h4>
+					<div>
+						<h4 class="text-xl text-slate-gray">Lili</h4>
+						<p class="text-slate-gray">Una experiencia única en el patio de una casa familiar. Comida casera excepcional y un anfitrión increíblemente carismático. Imprescindible reservar.</p>
+					</div>
 					<a href="https://maps.app.goo.gl/hrSM62NtMBxuXRY67" target="_blank" rel="noopener noreferrer" class="text-terracotta font-semibold hover:underline whitespace-nowrap">
 					  Ver en Mapa &rarr;
 					</a>
