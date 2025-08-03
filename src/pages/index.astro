@@ -737,6 +737,59 @@ import WeatherSection from '../components/WeatherSection.astro';
 		</div>
 	  </section>
 
+	<section id="accommodation" class="py-20 px-4 bg-white">
+		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">
+		  Alojamientos
+		</h2>
+		<div class="max-w-4xl mx-auto" id="accommodation-accordion">
+		  <!-- Desplegable para Tirana -->
+		  <div class="border-t border-terracotta/30">
+			<button class="accordion-header flex justify-between items-center w-full py-5 text-left">
+			  <span class="text-2xl font-semibold text-slate-gray">Tirana</span>
+			  <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+			</button>
+			<div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+			  <div class="p-5 pt-0">
+				<div class="space-y-4">
+				  <div class="flex justify-between items-center py-3 border-b border-slate-200">
+					<div>
+						<h4 class="text-xl text-slate-gray">Theranda Boutique Hotel</h4>
+						<p class="text-slate-gray">Un hotel boutique con encanto en el corazón de Tirana, conocido por su hospitalidad y diseño único.</p>
+					</div>
+					<a href="https://www.google.com/maps?q=Theranda+Boutique+Hotel,Tirana" target="_blank" rel="noopener noreferrer" class="text-terracotta font-semibold hover:underline whitespace-nowrap ml-4">
+					  Ver en Mapa &rarr;
+					</a>
+				  </div>
+				  </div>
+			  </div>
+			</div>
+		  </div>
+	  
+		  <!-- Desplegable para Theth -->
+		  <div class="border-y border-terracotta/30">
+			<button class="accordion-header flex justify-between items-center w-full py-5 text-left">
+			  <span class="text-2xl font-semibold text-slate-gray">Theth</span>
+			  <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+			</button>
+			<div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+			  <div class="p-5 pt-0">
+				<div class="space-y-4">
+				  <div class="flex justify-between items-center py-3 border-b border-slate-200">
+					<div>
+						<h4 class="text-xl text-slate-gray">Villa Belinis</h4>
+						<p class="text-slate-gray">Alojamiento con excelentes vistas, jardín y hospitalidad destacada, cerca de la ruta de Valbona.</p>
+					</div>
+					<a href="https://www.google.com/maps?q=Villa+Belinis,Theth" target="_blank" rel="noopener noreferrer" class="text-terracotta font-semibold hover:underline whitespace-nowrap ml-4">
+					  Ver en Mapa &rarr;
+					</a>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </section>
+
 	<section id="restaurants" class="py-20 px-4 bg-white">
 		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">
 		  Gastronomía Local: Dónde Comer y Beber
@@ -906,59 +959,6 @@ import WeatherSection from '../components/WeatherSection.astro';
 			</div>
 		</div>
 	</section>
-
-	<section id="accommodation" class="py-20 px-4 bg-white">
-		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">
-		  Alojamientos
-		</h2>
-		<div class="max-w-4xl mx-auto" id="accommodation-accordion">
-		  <!-- Desplegable para Tirana -->
-		  <div class="border-t border-terracotta/30">
-			<button class="accordion-header flex justify-between items-center w-full py-5 text-left">
-			  <span class="text-2xl font-semibold text-slate-gray">Tirana</span>
-			  <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-			</button>
-			<div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-			  <div class="p-5 pt-0">
-				<div class="space-y-4">
-				  <div class="flex justify-between items-center py-3 border-b border-slate-200">
-					<div>
-						<h4 class="text-xl text-slate-gray">Theranda Boutique Hotel</h4>
-						<p class="text-slate-gray">Un hotel boutique con encanto en el corazón de Tirana, conocido por su hospitalidad y diseño único.</p>
-					</div>
-					<a href="https://www.google.com/maps?q=Theranda+Boutique+Hotel,Tirana" target="_blank" rel="noopener noreferrer" class="text-terracotta font-semibold hover:underline whitespace-nowrap ml-4">
-					  Ver en Mapa &rarr;
-					</a>
-				  </div>
-				  </div>
-			  </div>
-			</div>
-		  </div>
-	  
-		  <!-- Desplegable para Theth -->
-		  <div class="border-y border-terracotta/30">
-			<button class="accordion-header flex justify-between items-center w-full py-5 text-left">
-			  <span class="text-2xl font-semibold text-slate-gray">Theth</span>
-			  <svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
-			</button>
-			<div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-			  <div class="p-5 pt-0">
-				<div class="space-y-4">
-				  <div class="flex justify-between items-center py-3 border-b border-slate-200">
-					<div>
-						<h4 class="text-xl text-slate-gray">Villa Belinis</h4>
-						<p class="text-slate-gray">Alojamiento con excelentes vistas, jardín y hospitalidad destacada, cerca de la ruta de Valbona.</p>
-					</div>
-					<a href="https://www.google.com/maps?q=Villa+Belinis,Theth" target="_blank" rel="noopener noreferrer" class="text-terracotta font-semibold hover:underline whitespace-nowrap ml-4">
-					  Ver en Mapa &rarr;
-					</a>
-				  </div>
-				</div>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </section>
 
 	<section id="culture" class="py-20 px-4 bg-linen-white">
 		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">Cultura de Albania</h2>
@@ -1159,19 +1159,19 @@ import WeatherSection from '../components/WeatherSection.astro';
 		</div>
 	</section>
 
-	<section id="info" class="py-20 px-4 bg-linen-white">
-        <h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">Información de Interés</h2>
-        <div class="max-w-2xl mx-auto space-y-4" id="info-accordion">
+	<section id="info" class="py-20 px-4 bg-alpine-green">
+        <h2 class="text-4xl font-sans font-semibold text-center text-linen-white mb-12">Información de Interés</h2>
+        <div class="max-w-4xl mx-auto space-y-4" id="info-accordion">
 
             <!-- Acordeón de Transporte -->
             <div class="border-b border-terracotta/30">
                 <button class="accordion-header flex justify-between items-center w-full py-4 text-left text-xl font-semibold text-slate-gray">
-                    <span class="flex items-center"><Bus class="w-6 h-6 mr-3 text-terracotta" />Transporte</span>
+                    <span class="flex items-center text-terracotta"><Bus class="w-6 h-6 mr-3 text-terracotta" />Transporte</span>
                     <ChevronRight class="w-6 h-6 transition-transform duration-300" />
                 </button>
                 <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
                     <div class="p-4 pt-0">
-                        <ul class="space-y-2 list-disc list-inside text-slate-gray">
+                        <ul class="space-y-2 list-disc list-inside text-linen-white">
                             <li><a href="https://albanianbus.com/wordpress/" target="_blank" rel="noopener noreferrer" class="text-terracotta hover:underline">Autobús Tirana-Theth</a> - Compañía recomendada.</li>
                             <li><a href="https://www.booking.com/index.html?aid=2314579&label=pagehome-pepecarsee" target="_blank" rel="noopener noreferrer" class="text-terracotta hover:underline">Alquiler de Coche</a> - Comparador de precios.</li>
                         </ul>
@@ -1182,12 +1182,12 @@ import WeatherSection from '../components/WeatherSection.astro';
             <!-- Acordeón de Consejos Prácticos -->
             <div class="border-b border-terracotta/30">
                 <button class="accordion-header flex justify-between items-center w-full py-4 text-left text-xl font-semibold text-slate-gray">
-                    <span class="flex items-center"><Info class="w-6 h-6 mr-3 text-terracotta" />Consejos Prácticos</span>
+                    <span class="flex items-center text-terracotta"><Info class="w-6 h-6 mr-3 text-terracotta" />Consejos Prácticos</span>
                     <ChevronRight class="w-6 h-6 transition-transform duration-300" />
                 </button>
                 <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
                      <div class="p-4 pt-0">
-                        <ul class="space-y-2 list-disc list-inside text-slate-gray">
+                        <ul class="space-y-2 list-disc list-inside text-linen-white">
                             <li><strong>SIM/eSIM:</strong> Comprar una SIM local es fácil y económico.</li>
                             <li><strong>Enchufes:</strong> Tipo F (estándar europeo).</li>
                         </ul>
@@ -1198,12 +1198,12 @@ import WeatherSection from '../components/WeatherSection.astro';
             <!-- Acordeón de Dinero -->
             <div class="border-b border-terracotta/30">
                 <button class="accordion-header flex justify-between items-center w-full py-4 text-left text-xl font-semibold text-slate-gray">
-                    <span class="flex items-center"><Landmark class="w-6 h-6 mr-3 text-terracotta" />Dinero</span>
+                    <span class="flex items-center text-terracotta"><Landmark class="w-6 h-6 mr-3 text-terracotta" />Dinero</span>
                     <ChevronRight class="w-6 h-6 transition-transform duration-300" />
                 </button>
                 <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
                      <div class="p-4 pt-0">
-                        <ul class="space-y-2 list-disc list-inside text-slate-gray">
+                        <ul class="space-y-2 list-disc list-inside text-linen-white">
                             <li><strong>Moneda:</strong> La moneda oficial es el Lek (ALL). 1€ equivale aproximadamente a 100 ALL.</li>
                             <li><strong>Pago con tarjeta:</strong> El uso de tarjeta no está generalizado, pero en grandes hoteles, restaurantes y supermercados de las ciudades principales se puede pagar sin problema. Revolut es una excelente opción para pagar en estos lugares y evitar comisiones.</li>
                             <li><strong>Cajeros automáticos:</strong> Hay cajeros en las ciudades principales, pero la mayoría cobra comisiones altas.</li>
@@ -1216,12 +1216,12 @@ import WeatherSection from '../components/WeatherSection.astro';
             <!-- Acordeón de Internet -->
             <div class="border-b border-terracotta/30">
                 <button class="accordion-header flex justify-between items-center w-full py-4 text-left text-xl font-semibold text-slate-gray">
-                    <span class="flex items-center"><Wifi class="w-6 h-6 mr-3 text-terracotta" />Internet y Conectividad</span>
+                    <span class="flex items-center text-terracotta"><Wifi class="w-6 h-6 mr-3 text-terracotta" />Internet y Conectividad</span>
                     <ChevronRight class="w-6 h-6 transition-transform duration-300" />
                 </button>
                 <div class="accordion-content max-h-0 overflow-hidden transition-all duration-300">
                     <div class="p-4 pt-0">
-                        <ul class="space-y-2 list-disc list-inside text-slate-gray">
+                        <ul class="space-y-2 list-disc list-inside text-linen-white">
                             <li><strong>Wifi en Alojamientos:</strong> La gran mayoría de hoteles y apartamentos en Albania ofrecen conexión <strong>Wi-Fi</strong> gratuita, aunque la velocidad puede variar, especialmente en zonas rurales.</li>
                             <li><strong>eSIM para Datos Móviles:</strong> Para mantenernos conectados en todo momento, utilizaremos una <strong>eSIM</strong>. Ofrece una buena cobertura y se puede comprar y activar online antes del viaje. <a href="https://roamic.com/es/products/albania-esim?variant=49538795471195" target="_blank" rel="noopener noreferrer" class="text-terracotta hover:underline">Aquí hay una opción recomendada</a>.</li>
                             <li><strong>Mapas sin Conexión:</strong> Para la navegación, especialmente en zonas de montaña donde la cobertura puede ser limitada, confiaremos en <strong>Maps.me</strong>, una aplicación que permite descargar mapas detallados para usarlos sin conexión a internet.</li>
