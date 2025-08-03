@@ -1,7 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import Countdown from '../components/Countdown.astro';
-import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain, Landmark, Castle, Camera, Moon, Church, Bike, Backpack, Sandwich, Droplets, Eye, CarFront, Star, Ship, Waves, Sun, Search, Sailboat, ChevronRight, Info, Wifi } from 'lucide-astro';
+import { Plane, CalendarDays, Bed, Bus, Footprints, Mountain, Landmark, Castle, Camera, Moon, Church, Bike, Backpack, Sandwich, Droplets, Eye, CarFront, Star, Ship, Waves, Sun, Search, Sailboat, ChevronRight, Info, Wifi, Shield, Lock, Flag, Heart } from 'lucide-astro';
 
 // Importamos las imágenes
 import heroImage from '../assets/theth_albania.jpg';
@@ -960,6 +960,205 @@ import WeatherSection from '../components/WeatherSection.astro';
 		</div>
 	  </section>
 
+	<section id="culture" class="py-20 px-4 bg-linen-white">
+		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">Cultura de Albania</h2>
+		<div class="max-w-4xl mx-auto" id="culture-accordion">
+			<!-- Desplegable para Historia de Albania -->
+			<div class="border-t border-terracotta/30">
+				<button class="accordion-header flex justify-between items-center w-full py-5 text-left">
+					<span class="flex items-center"><Flag class="w-6 h-6 mr-3 text-terracotta" />Historia de Albania</span>
+					<svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+				</button>
+				<div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+					<div class="p-5 pt-0 text-slate-gray space-y-6">
+						<p>
+							La historia moderna de Albania ha estado marcada por periodos de ocupación extranjera y un régimen comunista que la aisló del mundo. Comprender estos eventos es clave para apreciar la resiliencia y la identidad del pueblo albanés.
+						</p>
+						<h3 class="text-2xl font-semibold text-slate-gray">Invasión Italiana y Ocupación Alemana (1939-1944)</h3>
+						<p>
+							En abril de 1939, la Italia fascista de Mussolini invadió Albania, convirtiéndola en un protectorado. Esta ocupación duró hasta 1943, cuando Italia capituló en la Segunda Guerra Mundial. Tras la retirada italiana, las fuerzas alemanas ocuparon Albania, enfrentándose a una creciente resistencia partisana. Durante este periodo, Albania sufrió una gran devastación y sus recursos fueron explotados por las potencias ocupantes.
+						</p>
+						<p>
+							Un hecho notable de este periodo es que Albania fue el único país ocupado por los nazis que terminó la guerra con una población judía mayor que la que tenía al principio, gracias al código de honor "Besa" y a la negativa de las autoridades a entregar a los judíos.
+						</p>
+						<h3 class="text-2xl font-semibold text-slate-gray">El Régimen Comunista (1944-1991)</h3>
+						<h3 class="text-2xl font-semibold text-slate-gray">El Régimen Comunista (1944-1991): Anatomía de un Régimen Totalitario</h3>
+						<h4 class="text-xl font-semibold text-slate-gray">1. Ascenso de Enver Hoxha: el Stalin albanés</h4>
+						<p>
+							Tras la retirada nazi en 1944, los partisanos comunistas, liderados por Enver Hoxha, toman el poder. Hoxha gobernará hasta su muerte en 1985.
+						</p>
+						<p>
+							Influencias iniciales: la URSS de Stalin. Tras la muerte de Stalin (1953), Hoxha rompe con Moscú acusándolos de "revisionismo".
+						</p>
+						<p>
+							Posteriormente se alía con China maoísta… hasta que también rompe con ellos en 1978. Resultado: aislamiento total.
+						</p>
+						<p class="italic">
+							“El mundo está podrido. Solo Albania es pura.” — Parafraseando la línea oficial del régimen
+						</p>
+						<h4 class="text-xl font-semibold text-slate-gray">2. Ideología: Marxismo-leninismo extremo + Nacionalismo</h4>
+						<p>
+							Hoxha creía que Albania debía ser autosuficiente: cerró fronteras, persiguió la religión, prohibió jeans y música occidental.
+						</p>
+						<p>
+							Se prohíbe la propiedad privada, el comercio exterior y todo contacto con el mundo capitalista.
+						</p>
+						<p>
+							La represión fue brutal: vigilancia total, campos de trabajos forzados, ejecuciones sumarias.
+						</p>
+						<p>
+							Sigurimi (la policía secreta) contaba con decenas de miles de informantes. Todos espiaban a todos.
+						</p>
+						<h4 class="text-xl font-semibold text-slate-gray">3. Política de Búnkeres: Paranoia geopolítica</h4>
+						<p>
+							Hoxha temía una invasión (de la URSS, la OTAN o incluso Yugoslavia).
+						</p>
+						<p>
+							Resultado: construyó entre 173.000 y 750.000 búnkeres de hormigón por todo el país. Muchos aún existen.
+						</p>
+						<p>
+							Simbolizan la psicología del régimen: aislado, atrincherado, obsesionado con la defensa.
+						</p>
+						<p>
+							Hoy algunos búnkeres han sido convertidos en bares, museos y galerías (p.ej., Bunk’Art en Tirana).
+						</p>
+						<h4 class="text-xl font-semibold text-slate-gray">4. Prohibición absoluta de la religión</h4>
+						<p>
+							En 1967, se declara oficialmente el "primer Estado ateo del mundo".
+						</p>
+						<p>
+							Se cierran iglesias, mezquitas, tekkes bektashíes.
+						</p>
+						<p>
+							Quienes practicaban la fe podían ser enviados a prisión o campos de trabajo.
+						</p>
+						<p>
+							Una cultura milenaria de pluralismo religioso fue aplastada en una generación.
+						</p>
+						<h4 class="text-xl font-semibold text-slate-gray">5. Economía planificada y ruina estructural</h4>
+						<p>
+							Se industrializó el país con medios precarios. Las granjas se colectivizaron.
+						</p>
+						<p>
+							No había mercado, competencia ni innovación. Resultado: pobreza extrema.
+						</p>
+						<p>
+							Mientras el régimen presumía de independencia, la mayoría de la población vivía sin coches privados, sin calefacción, sin libertad.
+						</p>
+						<h4 class="text-xl font-semibold text-slate-gray">6. Impactos actuales del comunismo</h4>
+						<p>
+							Memoria dividida: para algunos, orden y dignidad nacional. Para la mayoría, represión y miseria.
+						</p>
+						<p>
+							Identidad nacional: el trauma del aislamiento ha hecho que muchos albaneses desconfíen de ideologías totalitarias hoy.
+						</p>
+						<p>
+							Herencia arquitectónica: edificios grises, funcionales, muchos hoy en ruinas o transformados.
+						</p>
+						<p>
+							Juventud desmemoriada: las nuevas generaciones apenas conocen este pasado, pero el turismo lo está reactivando.
+						</p>
+						<h3 class="text-2xl font-semibold text-slate-gray">Caída del Comunismo y Transición (1991 en adelante)</h3>
+						<p>
+							A finales de los años 80, con la caída de los regímenes comunistas en Europa del Este, Albania también experimentó un levantamiento popular. En 1991, tras masivas protestas, el Partido del Trabajo de Albania (antiguo Partido Comunista) perdió el poder y se celebraron las primeras elecciones multipartidistas. El país inició un difícil proceso de transición hacia la democracia y la economía de mercado, enfrentando desafíos como la inestabilidad política, la corrupción y la pobreza. A pesar de los obstáculos, Albania ha avanzado significativamente, buscando integrarse en las estructuras europeas y desarrollando su potencial turístico.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Desplegable para Religión -->
+			<div class="border-y border-terracotta/30">
+				<button class="accordion-header flex justify-between items-center w-full py-5 text-left">
+					<span class="flex items-center"><Church class="w-6 h-6 mr-3 text-terracotta" />Religión</span>
+					<svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+				</button>
+				<div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+					<div class="p-5 pt-0 text-slate-gray space-y-6">
+						<p>
+							Albania es un país con una rica y compleja historia religiosa, marcada por la coexistencia de diversas confesiones y un periodo de ateísmo estatal forzado durante el régimen comunista. Hoy en día, la libertad religiosa está garantizada y la armonía interreligiosa es un pilar fundamental de la sociedad albanesa.
+						</p>
+						<h3 class="text-2xl font-semibold text-slate-gray">Principales Confesiones</h3>
+						<p>
+							Las principales religiones en Albania son el Islam (mayoría sunita y una importante comunidad Bektashi), el Cristianismo Ortodoxo y el Catolicismo. Aunque no hay datos oficiales recientes debido a la sensibilidad del tema tras el comunismo, se estima que la población se distribuye de la siguiente manera:
+						</p>
+						<ul class="list-disc list-inside ml-4 space-y-2">
+							<li><strong>Musulmanes:</strong> Aproximadamente 58% (incluyendo Bektashis).</li>
+							<li><strong>Cristianos Ortodoxos:</strong> Aproximadamente 17%.</li>
+							<li><strong>Católicos:</strong> Aproximadamente 10%.</li>
+							<li><strong>Otros/No declarados:</strong> El resto de la población, incluyendo ateos y aquellos que no se identifican con ninguna religión.</li>
+						</ul>
+						<h3 class="text-2xl font-semibold text-slate-gray">La Armonía Interreligiosa</h3>
+						<p>
+							A pesar de la diversidad religiosa, Albania es reconocida por su excepcional armonía interreligiosa. Las diferentes comunidades conviven pacíficamente y es común ver mezquitas, iglesias ortodoxas y católicas construidas muy cerca unas de otras. Esta convivencia es un motivo de orgullo nacional y un ejemplo para el mundo.
+						</p>
+						<h3 class="text-2xl font-semibold text-slate-gray">Impacto del Ateísmo Estatal</h3>
+						<p>
+							Durante el régimen comunista de Enver Hoxha (1944-1991), Albania fue declarado el primer estado ateo del mundo. Todas las instituciones religiosas fueron cerradas, los líderes religiosos perseguidos y la práctica de la fe prohibida. Este periodo dejó una profunda huella en la sociedad, y aunque la religión ha resurgido con fuerza, muchos albaneses, especialmente las generaciones más jóvenes, no tienen una afiliación religiosa estricta.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Desplegable para Albania y LGTBIQ+ -->
+			<div class="border-b border-terracotta/30">
+				<button class="accordion-header flex justify-between items-center w-full py-5 text-left">
+					<span class="flex items-center"><Heart class="w-6 h-6 mr-3 text-terracotta" />Albania y LGTBIQ+</span>
+					<svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+				</button>
+				<div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+					<div class="p-5 pt-0 text-slate-gray space-y-6">
+						<p>
+							La situación de la comunidad LGTBIQ+ en Albania ha experimentado avances significativos en los últimos años, aunque aún existen desafíos. El país ha implementado leyes antidiscriminación y ha habido un aumento en la visibilidad y aceptación, especialmente en las grandes ciudades como Tirana.
+						</p>
+						<h3 class="text-2xl font-semibold text-slate-gray">Marco Legal y Derechos</h3>
+						<ul class="list-disc list-inside ml-4 space-y-2">
+							<li><strong>Leyes Antidiscriminación:</strong> Albania aprobó en 2010 una ley integral contra la discriminación que incluye la orientación sexual y la identidad de género como motivos protegidos. Esto fue un paso importante para la protección legal de la comunidad LGTBIQ+.</li>
+							<li><strong>Reconocimiento Legal:</strong> Aunque no existe el matrimonio igualitario, la ley de 2010 reconoce las uniones civiles para parejas del mismo sexo, otorgándoles algunos derechos similares a los del matrimonio.</li>
+							<li><strong>Cambio de Género:</strong> La legislación albanesa permite el cambio legal de género, aunque el proceso puede ser complejo y requiere un diagnóstico médico.</li>
+						</ul>
+						<h3 class="text-2xl font-semibold text-slate-gray">Sociedad y Visibilidad</h3>
+						<p>
+							En Tirana, la capital, la comunidad LGTBIQ+ es más visible y activa. Existen organizaciones que trabajan por los derechos LGTBIQ+ y se celebran eventos como el desfile del Orgullo. Sin embargo, en zonas rurales y más conservadoras, la aceptación puede ser menor y la discriminación más prevalente.
+						</p>
+						<p>
+							A pesar de los avances legales, la sociedad albanesa sigue siendo mayoritariamente conservadora, y la discriminación y los prejuicios persisten. No obstante, el país está en un camino de progreso y apertura, impulsado en parte por su aspiración a la integración europea.
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Desplegable para Política actual -->
+			<div class="border-b border-terracotta/30">
+				<button class="accordion-header flex justify-between items-center w-full py-5 text-left">
+					<span class="flex items-center"><Shield class="w-6 h-6 mr-3 text-terracotta" />Política actual</span>
+					<svg class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+				</button>
+				<div class="accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+					<div class="p-5 pt-0 text-slate-gray space-y-6">
+						<p>
+							Albania es una república parlamentaria. El país ha estado en un proceso de transición democrática desde la caída del comunismo en 1991, buscando consolidar sus instituciones democráticas y avanzar en su camino hacia la integración europea.
+						</p>
+						<h3 class="text-2xl font-semibold text-slate-gray">Sistema Político</h3>
+						<ul class="list-disc list-inside ml-4 space-y-2">
+							<li><strong>Presidente:</strong> Es el jefe de Estado, elegido por el Parlamento para un mandato de cinco años. Su rol es principalmente ceremonial, aunque tiene algunas funciones importantes en la política exterior y la seguridad.</li>
+							<li><strong>Primer Ministro:</strong> Es el jefe de Gobierno y ejerce el poder ejecutivo. Es propuesto por el Presidente y debe ser aprobado por el Parlamento.</li>
+							<li><strong>Parlamento (Kuvendi):</strong> Es unicameral y consta de 140 miembros elegidos por un período de cuatro años. Es el principal órgano legislativo del país.</li>
+							<li><strong>Gobierno Actual:</strong> Actualmente, el Primer Ministro es Edi Rama, líder del Partido Socialista de Albania (PS), un partido de centro-izquierda. Ha estado en el cargo desde 2013.</li>
+						</ul>
+						<h3 class="text-2xl font-semibold text-slate-gray">Integración Europea</h3>
+						<p>
+							La integración en la Unión Europea es el objetivo estratégico principal de la política exterior albanesa. Albania obtuvo el estatus de país candidato a la UE en 2014 y ha estado trabajando en reformas para cumplir con los criterios de adhesión, incluyendo la lucha contra la corrupción, la reforma judicial y la mejora de la administración pública.
+						</p>
+						<h3 class="text-2xl font-semibold text-slate-gray">Desafíos Actuales</h3>
+						<p>
+							A pesar de los avances, Albania aún enfrenta desafíos como la corrupción, la debilidad del estado de derecho y la polarización política. Sin embargo, el gobierno y la sociedad civil están comprometidos con la superación de estos obstáculos para construir un futuro más próspero y democrático.
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<section id="info" class="py-20 px-4 bg-linen-white">
         <h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">Información de Interés</h2>
         <div class="max-w-2xl mx-auto space-y-4" id="info-accordion">
@@ -1102,5 +1301,6 @@ import WeatherSection from '../components/WeatherSection.astro';
         setupAccordion('#info-accordion', '90deg');
         setupAccordion('#restaurants-accordion');
         setupAccordion('#accommodation-accordion');
+        setupAccordion('#culture-accordion');
 	});
 </script>
