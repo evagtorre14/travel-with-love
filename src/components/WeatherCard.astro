@@ -1,0 +1,39 @@
+---
+import type { destinations } from "../data/destinations";
+import { destinationImages } from "../data/destination-images";
+import { Image } from 'astro:assets';
+
+interface Props {
+  destination: (typeof destinations)[0];
+}
+
+const { destination } = Astro.props;
+const image = destinationImages[destination.imageKey as keyof typeof destinationImages];
+---
+
+<div 
+  class="relative rounded-lg overflow-hidden shadow-md text-white min-h-[180px]"
+  data-destination-name={destination.name}
+  data-lat={destination.lat}
+  data-lon={destination.lon}
+>
+  <Image src={image} alt={`Imagen de ${destination.name}`} class="absolute inset-0 w-full h-full object-cover" />
+  <div class="absolute inset-0 bg-slate-gray/60 p-3 flex flex-col justify-between">
+    <h3 class="text-lg font-bold">{destination.name}</h3>
+    <div class="forecast-container grid grid-cols-3 gap-1 mt-2">
+      <!-- Loading state -->
+      <div class="text-center animate-pulse">
+        <div class="bg-gray-400/50 rounded-full mx-auto w-8 h-8"></div>
+        <div class="bg-gray-400/50 rounded mt-1 h-4 w-12 mx-auto"></div>
+      </div>
+      <div class="text-center animate-pulse">
+        <div class="bg-gray-400/50 rounded-full mx-auto w-8 h-8"></div>
+        <div class="bg-gray-400/50 rounded mt-1 h-4 w-12 mx-auto"></div>
+      </div>
+      <div class="text-center animate-pulse">
+        <div class="bg-gray-400/50 rounded-full mx-auto w-8 h-8"></div>
+        <div class="bg-gray-400/50 rounded mt-1 h-4 w-12 mx-auto"></div>
+      </div>
+    </div>
+  </div>
+</div>

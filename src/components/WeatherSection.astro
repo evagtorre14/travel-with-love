@@ -1,0 +1,87 @@
+---
+import { destinations } from "../data/destinations";
+import WeatherCard from "./WeatherCard.astro";
+---
+
+<div id="weather-section" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+  {destinations.map(destination => (
+    <WeatherCard destination={destination} />
+  ))}
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const apiKey = import.meta.env.PUBLIC_OPENWEATHERMAP_KEY;
+    if (!apiKey) {
+      console.error("OpenWeatherMap API key not found.");
+      return;
+    }
+
+    const weatherSection = document.getElementById('weather-section');
+    if (!weatherSection) return;
+
+    const cards = weatherSection.querySelectorAll('[data-destination-name]');
+
+    cards.forEach(async (card) => {
+      const lat = card.getAttribute('data-lat');
+      const lon = card.getAttribute('data-lon');
+      const name = card.getAttribute('data-destination-name');
+      const forecastContainer = card.querySelector('.forecast-container');
+
+      if (!lat || !lon || !name) return;
+
+      // --- Reverting to the free /forecast endpoint with improved logic ---
+      const apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+      try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) throw new Error(`API request failed with status ${response.status}`);
+        const data = await response.json();
+
+        if (!data.list) throw new Error("API response is missing 'list' property.");
+
+        const dailyForecasts = {};
+        data.list.forEach(item => {
+          const date = new Date(item.dt * 1000).toISOString().split('T')[0];
+          if (!dailyForecasts[date]) {
+            dailyForecasts[date] = [];
+          }
+          dailyForecasts[date].push(item);
+        });
+
+        if (!forecastContainer) return;
+        forecastContainer.innerHTML = ''; // Clear loading state
+
+        const days = Object.keys(dailyForecasts).sort().slice(0, 3);
+
+        days.forEach(date => {
+          const dayData = dailyForecasts[date];
+          if (dayData.length === 0) return;
+
+          // --- New Logic: Find the forecast closest to midday for the icon ---
+          let representativeForecast = dayData.find(d => d.dt_txt.includes("12:00:00")) || dayData[Math.floor(dayData.length / 2)];
+
+          const maxTemp = Math.round(Math.max(...dayData.map(d => d.main.temp)));
+          const minTemp = Math.round(Math.min(...dayData.map(d => d.main.temp)));
+          const icon = representativeForecast.weather[0].icon;
+          const description = representativeForecast.weather[0].description;
+
+          const dayElement = document.createElement('div');
+          dayElement.className = 'text-center';
+          dayElement.innerHTML = `
+            <p class="font-semibold text-xs">${new Date(date).toLocaleDateString('es-ES', { weekday: 'short' })}</p>
+            <img src="https://openweathermap.org/img/wn/${icon}.png" alt="${description}" class="mx-auto w-10 h-10">
+            <p class="text-xs">${maxTemp}°/${minTemp}°</p>
+          `;
+          forecastContainer.appendChild(dayElement);
+        });
+
+      } catch (error) {
+        console.error(`[Weather Error for ${name}]`, error);
+        if (forecastContainer) {
+          forecastContainer.innerHTML = '<p class="text-red-400 text-xs p-2">Error al cargar</p>';
+        }
+      }
+    });
+  });
+</script>

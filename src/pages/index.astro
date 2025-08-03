@@ -22,6 +22,7 @@ import kadaifImage from '../assets/kadaif.jpg';
 import vinoImage from '../assets/vino.jpg';
 import kayak3Image from '../assets/kayak3.jpg';
 import Activity from '../components/Activity.astro';
+import WeatherSection from '../components/WeatherSection.astro';
 ---
 
 <MainLayout title="Albania 2025">
@@ -855,6 +856,13 @@ import Activity from '../components/Activity.astro';
             </div>
         </div>
     </section>
+
+	<section id="weather" class="py-20 px-4 bg-slate-50">
+		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">El Tiempo en Nuestros Destinos</h2>
+		<div class="max-w-6xl mx-auto">
+			<WeatherSection />
+		</div>
+	</section>
 </MainLayout>
 
 <script>
