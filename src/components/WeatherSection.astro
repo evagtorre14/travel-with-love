@@ -3,7 +3,7 @@ import { destinations } from "../data/destinations";
 import WeatherCard from "./WeatherCard.astro";
 ---
 
-<div id="weather-section" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+<div id="weather-section" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
   {destinations.map(destination => (
     <WeatherCard destination={destination} />
   ))}
