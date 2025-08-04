@@ -1351,8 +1351,8 @@ import WeatherSection from '../components/WeatherSection.astro';
         const setupAccordion = (containerSelector, rotation = '180deg') => {
             document.querySelectorAll(`${containerSelector} .accordion-header`).forEach(button => {
                 button.addEventListener('click', () => {
-                    const accordionContent = button.nextElementSibling;
-                    const accordionIcon = button.querySelector('svg');
+                    const accordionContent = button.nextElementSibling as HTMLElement;
+                    const accordionIcon = button.querySelector('svg') as SVGSVGElement;
 
                     if (accordionContent && accordionIcon) {
                         button.classList.toggle('active');
