@@ -1,68 +1,64 @@
-# Astro Starter Kit: Blog
+# TravelWithLove Itineraries
 
-```sh
-npm create astro@latest -- --template blog
+## 1. Product Vision
+
+To create a visually appealing and fast static web application to display and organize travel itineraries. Navigation will be fluid and intuitive, allowing users to easily switch between different trips and quickly browse the content of a specific itinerary.
+
+## 2. Tech Stack
+
+This project is built with the following technologies:
+
+- **Main Framework:** [Astro](https://astro.build/)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+- **Icons:** [Astro Icon](https://github.com/natemoo-re/astro-icon#readme)
+- **Deployment:** [GitHub Pages](https://pages.github.com/)
+
+## 3. Project Structure
+
+The project follows the standard structure of an Astro project:
+
 ```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/blog)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/blog)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/blog/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![blog](https://github.com/withastro/astro/assets/2244813/ff10799f-a816-4703-b967-c78997e8323d)
-
-Features:
-
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
-- ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-├── public/
+/
+├── public/                 # Static files (images, fonts, etc.)
 ├── src/
-│   ├── components/
-│   ├── content/
-│   ├── layouts/
-│   └── pages/
-├── astro.config.mjs
-├── README.md
-├── package.json
-└── tsconfig.json
+│   ├── assets/             # Images and other resources
+│   ├── components/         # Reusable Astro components
+│   ├── data/               # Application data (destinations, etc.)
+│   ├── layouts/            # Page layouts
+│   ├── pages/              # Application pages and routes
+│   └── styles/             # Global styles
+└── package.json            # Project dependencies and scripts
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## 4. Available Scripts
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+In the project directory, you can run the following commands:
 
-The `src/content/` directory contains "collections" of related Markdown and MDX documents. Use `getCollection()` to retrieve posts from `src/content/blog/`, and type-check your frontmatter using an optional schema. See [Astro's Content Collections docs](https://docs.astro.build/en/guides/content-collections/) to learn more.
+- `npm run dev`: Starts the development server at `localhost:4321`.
+- `npm run build`: Compiles the site for production in the `dist/` directory.
+- `npm run preview`: Previews the production site locally.
 
-Any static assets, like images, can be placed in the `public/` directory.
+## 5. Deployment
 
-## 🧞 Commands
+The project is automatically deployed to GitHub Pages every time a `push` is made to the `main` branch. The workflow is defined in `.github/workflows/deploy.yml`.
 
-All commands are run from the root of the project, from a terminal:
+## 6. Style Guide
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+The project uses Tailwind CSS for styling. The configuration is located in `tailwind.config.mjs`.
 
-## 👀 Want to learn more?
+### Color Palette
 
-Check out [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- `alpine-green`: `#2E4636`
+- `terracotta`: `#D97746`
+- `linen-white`: `#F7F5F2`
+- `slate-gray`: `#2D3748`
 
-## Credit
+### Typography
 
-This theme is based off of the lovely [Bear Blog](https://github.com/HermanMartinus/bearblog/).
+- **Main Font:** `Poppins`
+
+## 7. Analytics
+
+This project uses Google Analytics to track user traffic. The tracking script is implemented directly in the main layout file: `src/layouts/MainLayout.astro`.
+
+- **Tracking ID:** `G-17DVMY56N1`
