@@ -62,3 +62,9 @@ The project uses Tailwind CSS for styling. The configuration is located in `tail
 This project uses Google Analytics to track user traffic. The tracking script is implemented directly in the main layout file: `src/layouts/MainLayout.astro`.
 
 - **Tracking ID:** `G-17DVMY56N1`
+
+## 8. External Services
+
+### OpenWeatherMap
+
+To display weather information, the application uses the [OpenWeatherMap API](https://openweathermap.org/api). The API key is stored as a secret in the GitHub repository (`OPENWEATHERMAP_API_KEY`) and is used during the build process for deployment, as defined in the GitHub Actions workflow.
