@@ -63,7 +63,19 @@ This project uses Google Analytics to track user traffic. The tracking script is
 
 - **Tracking ID:** `G-17DVMY56N1`
 
-## 8. External Services
+## 8. SEO
+
+To improve search engine visibility, several SEO best practices have been implemented:
+
+- **Sitemap:** The `@astrojs/sitemap` integration has been added to automatically generate a `sitemap-index.xml` file during the build process. This helps search engines discover and index all pages of the site.
+
+- **robots.txt:** A `public/robots.txt` file has been created to instruct search engine crawlers on how to crawl the site and to point them to the sitemap.
+
+- **Meta Tags:** A reusable `SEO.astro` component has been created in `src/components/` to manage all important meta tags centrally. This includes the title, description, canonical URL, and Open Graph tags for social media sharing. This component is used in the main layout (`src/layouts/MainLayout.astro`) to ensure all pages have a solid SEO foundation.
+
+- **Image Alt Texts:** All images in the main page components (`Hero.astro`, `Destinations.astro`, `Activities.astro`, `Flavors.astro`) have been updated with descriptive alt texts. This improves accessibility and allows search engines to better understand the content of the images.
+
+## 9. External Services
 
 ### OpenWeatherMap
 
