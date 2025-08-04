@@ -1,0 +1,251 @@
+---
+import { Castle, Landmark, Camera, Moon, Church, Bike, Droplets, Eye, Footprints, Ship, Waves, Mountain } from 'lucide-astro';
+---
+
+<!-- Secciones de Detalles de Destinos -->
+<div id="destination-details-container" class="max-w-6xl mx-auto">
+    <!-- Detalles de Shkodër (Oculto por defecto) -->
+    <section id="shkoder-details" class="destination-details hidden py-20 px-4">
+        <h3 class="text-3xl font-semibold text-slate-gray mb-8">Puntos de Interés en Shkodër</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex items-start">
+                <Castle class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Castillo de Rozafa</h4>
+                    <p>Una fortaleza legendaria con vistas panorámicas al lago Shkodër y los ríos.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Landmark class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Paseo Kole Idromeno</h4>
+                    <p>El corazón de la ciudad, una calle peatonal de estilo veneciano llena de cafés y vida.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Camera class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Museo de Fotografía Marubi</h4>
+                    <p>Un impresionante archivo fotográfico que documenta la historia de Albania.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Moon class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Mezquita de Ebu Bekr</h4>
+                    <p>La mezquita principal de la ciudad, un hermoso ejemplo de arquitectura islámica moderna.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Church class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Catedral Ortodoxa de la Natividad</h4>
+                    <p>Un templo de reciente construcción que destaca por sus cúpulas y su iconografía interior.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Bike class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Lago Shkodër</h4>
+                    <p>El lago más grande de los Balcanes, ideal para un relajante paseo en bicicleta por sus orillas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalles de Theth (Oculto por defecto) -->
+    <section id="theth-details" class="destination-details hidden py-20 px-4">
+        <h3 class="text-3xl font-semibold text-slate-gray mb-8">Puntos de Interés en Theth</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex items-start">
+                <Droplets class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Cascada de Grunas</h4>
+                    <p>Una impresionante caída de agua de 30 metros, declarada monumento natural.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Eye class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">El Ojo Azul (Syri i Kaltër)</h4>
+                    <p>Una piscina natural de aguas increíblemente azules y frías, formada por la erosión del río.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Church class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Iglesia de Theth</h4>
+                    <p>El icónico edificio de piedra del pueblo, una imagen clásica de los Alpes Albaneses.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Landmark class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Torre de Aislamiento (Kulla e Ngujimit)</h4>
+                    <p>Una torre de piedra utilizada históricamente para proteger a los hombres en disputas de sangre.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalles de Berat (Oculto por defecto) -->
+    <section id="berat-details" class="destination-details hidden py-20 px-4">
+        <h3 class="text-3xl font-semibold text-slate-gray mb-8">Puntos de Interés en Berat</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex items-start">
+                <Castle class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Castillo de Berat (Kala)</h4>
+                    <p>Una ciudadela aún habitada con iglesias bizantinas, mezquitas otomanas y vistas espectaculares.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Church class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Iglesia de la Santísima Trinidad</h4>
+                    <p>Una joya arquitectónica del siglo XIII, perfectamente conservada en la ladera del castillo.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Moon class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Mezquitas Históricas</h4>
+                    <p>Descubrir la Mezquita del Rey y la Mezquita de Plomo, testigos de la historia otomana de la ciudad.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Footprints class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Barrios de Mangalem y Gorica</h4>
+                    <p>Pasear por el casco antiguo, famoso por sus casas otomanas de mil ventanas que se asoman al río.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Landmark class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Bulevar Republika</h4>
+                    <p>Un animado paseo peatonal junto al río, perfecto para tomar un café y observar la vida local.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalles de Península de Karaburun (Oculto por defecto) -->
+    <section id="karaburun-details" class="destination-details hidden py-20 px-4">
+        <h3 class="text-3xl font-semibold text-slate-gray mb-8">Puntos de Interés en la Península de Karaburun</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex items-start">
+                <Ship class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Cueva de Haxhi Ali</h4>
+                    <p>Una cueva marina espectacular, accesible en barco, ideal para explorar y nadar.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Waves class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Playas Vírgenes</h4>
+                    <p>Calas solitarias de aguas turquesas, perfectas para un día de relax y snorkel lejos de las multitudes.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Mountain class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Senderismo y Vistas</h4>
+                    <p>Rutas de senderismo que ofrecen vistas panorámicas de la bahía de Vlorë y el mar Jónico.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalles de Riviera Albanesa (Oculto por defecto) -->
+    <section id="riviera-details" class="destination-details hidden py-20 px-4">
+        <h3 class="text-3xl font-semibold text-slate-gray mb-8">Playas de la Riviera Albanesa (de Norte a Sur)</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex items-start">
+                <Waves class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Dhermi Beach</h4>
+                    <p>Una de las playas más famosas y animadas, con aguas cristalinas y una gran oferta de restaurantes y bares.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Waves class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Gjipe Beach</h4>
+                    <p>Una playa virgen y espectacular, accesible a través de una caminata o en barco, rodeada de un cañón impresionante.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Waves class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Jale Beach</h4>
+                    <p>Una playa muy popular entre los jóvenes, con un ambiente animado y aguas turquesas.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Waves class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Livadhi Beach</h4>
+                    <p>Una playa más tranquila y familiar, con aguas cristalinas y un ambiente relajado.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Waves class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Lukove Beach</h4>
+                    <p>Una playa de guijarros blancos y aguas turquesas, rodeada de olivos y con un ambiente muy tranquilo.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Waves class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Borsh Beach</h4>
+                    <p>La playa más larga de la Riviera, con 7 km de longitud, ideal para dar largos paseos y disfrutar de la tranquilidad.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Waves class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Ksamil Beach</h4>
+                    <p>Famosa por sus pequeñas islas a las que se puede llegar nadando, es una de las playas más fotografiadas de Albania.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detalles de Gjirokastër (Oculto por defecto) -->
+    <section id="gjirokaster-details" class="destination-details hidden py-20 px-4">
+        <h3 class="text-3xl font-semibold text-slate-gray mb-8">Puntos de Interés en Gjirokastër</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="flex items-start">
+                <Castle class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Castillo de Gjirokastër</h4>
+                    <p>Uno de los castillos más grandes de los Balcanes con vistas panorámicas.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Landmark class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Casco Antiguo y Bazar</h4>
+                    <p>Calles empedradas, tiendas de artesanía y un ambiente de la época otomana.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Church class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Casas-torre otomanas</h4>
+                    <p>Visita la Casa Skenduli o la Casa Zekate para ver la arquitectura tradicional.</p>
+                </div>
+            </div>
+            <div class="flex items-start">
+                <Moon class="w-8 h-8 mr-4 text-terracotta" />
+                <div>
+                    <h4 class="font-semibold text-xl">Túnel de la Guerra Fría</h4>
+                    <p>Un enorme búnker subterráneo de la época comunista.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
