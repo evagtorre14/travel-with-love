@@ -1,0 +1,24 @@
+---
+import Countdown from './Countdown.astro';
+import { CalendarDays } from 'lucide-astro';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+    image: ImageMetadata;
+}
+
+const { image } = Astro.props;
+---
+
+<section class="relative h-screen">
+    <img src={image.src} alt="Imagen de las montañas de Theth, Albania" class="w-full h-full object-cover">
+    <Countdown />
+    <div class="absolute inset-0 bg-slate-gray/50 flex flex-col justify-center items-center text-center">
+        <h1 class="text-6xl font-sans font-semibold text-linen-white">Albania 2025</h1>
+        <div class="flex items-center justify-center text-2xl text-linen-white mt-4">
+            <CalendarDays class="w-6 h-6 mr-2" />
+            <span>Del 6 al 17 de Agosto</span>
+        </div>
+        <p class="text-xl text-linen-white mt-4">Un viaje entre el mar y la montaña</p>
+    </div>
+</section>
