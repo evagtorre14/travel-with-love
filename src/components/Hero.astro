@@ -1,4 +1,5 @@
 ---
+import { Picture } from 'astro:assets';
 import Countdown from './Countdown.astro';
 import { CalendarDays } from 'lucide-astro';
 import type { ImageMetadata } from 'astro';
@@ -11,7 +12,7 @@ const { image } = Astro.props;
 ---
 
 <section class="relative h-screen">
-    <img src={image.src} alt="Impresionantes vistas a las montañas de Theth en Albania, con un valle verde y picos rocosos bajo un cielo azul." class="w-full h-full object-cover">
+    <Picture src={image} formats={['avif', 'webp']} alt="Impresionantes vistas a las montañas de Theth en Albania, con un valle verde y picos rocosos bajo un cielo azul." class="w-full h-full object-cover" widths={[400, 800, 1200, 1600, 2000]} sizes="100vw" />
     <Countdown />
     <div class="absolute inset-0 bg-slate-gray/50 flex flex-col justify-center items-center text-center">
         <h1 class="text-6xl font-sans font-semibold text-linen-white">Albania 2025</h1>

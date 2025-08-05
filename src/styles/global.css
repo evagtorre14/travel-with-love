@@ -1,4 +1,56 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap');
+/* Definición de la fuente Playfair Display Regular */
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../../public/fonts/playfair-display-v39-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Definición de la fuente Playfair Display Bold */
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('../../public/fonts/playfair-display-v39-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Definición de la fuente Lato Regular */
+@font-face {
+  font-family: 'Lato';
+  src: url('../../public/fonts/lato-v24-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Definición de la fuente Lato Bold */
+@font-face {
+  font-family: 'Lato';
+  src: url('../../public/fonts/lato-v24-latin-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Definición de la fuente Poppins Regular */
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/poppins-v23-latin-regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Definición de la fuente Poppins Bold */
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../public/fonts/poppins-v23-latin-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 
 @tailwind base;
 @tailwind components;

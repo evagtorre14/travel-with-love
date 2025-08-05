@@ -1,4 +1,5 @@
 ---
+import { Picture } from 'astro:assets';
 import shkoderImage from '../assets/shkoder.jpg';
 import beratImage from '../assets/berat.jpg';
 import thethImage from '../assets/theth_albania.jpg';
@@ -13,42 +14,42 @@ import gjirokasterImage from '../assets/gjirokaster.jpg';
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
         <!-- Card de Shkodër -->
         <div class="destination-card relative rounded-lg overflow-hidden shadow-lg cursor-pointer group" data-target="shkoder-details">
-            <img src={shkoderImage.src} alt="Vista del Castillo de Rozafa en Shkodër con el río Buna al fondo." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+            <Picture src={shkoderImage} formats={['avif', 'webp']} alt="Vista del Castillo de Rozafa en Shkodër con el río Buna al fondo." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" widths={[400, 800, 1200]} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             <div class="absolute inset-0 bg-slate-gray/60 flex items-center justify-center">
                 <h3 class="text-3xl font-semibold text-linen-white">Shkodër</h3>
             </div>
         </div>
         <!-- Card de Theth -->
         <div class="destination-card relative rounded-lg overflow-hidden shadow-lg cursor-pointer group" data-target="theth-details">
-            <img src={thethImage.src} alt="La icónica iglesia de Theth en un valle verde rodeada por los Alpes albaneses." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+            <Picture src={thethImage} formats={['avif', 'webp']} alt="La icónica iglesia de Theth en un valle verde rodeada por los Alpes albaneses." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" widths={[400, 800, 1200]} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             <div class="absolute inset-0 bg-slate-gray/60 flex items-center justify-center">
                 <h3 class="text-3xl font-semibold text-linen-white">Theth</h3>
             </div>
         </div>
         <!-- Card de Berat -->
         <div class="destination-card relative rounded-lg overflow-hidden shadow-lg cursor-pointer group" data-target="berat-details">
-            <img src={beratImage.src} alt="Casas otomanas de ventanas blancas apiladas en la ladera de una colina en Berat, la ciudad de las mil ventanas." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+            <Picture src={beratImage} formats={['avif', 'webp']} alt="Casas otomanas de ventanas blancas apiladas en la ladera de una colina en Berat, la ciudad de las mil ventanas." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" widths={[400, 800, 1200]} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             <div class="absolute inset-0 bg-slate-gray/60 flex items-center justify-center">
                 <h3 class="text-3xl font-semibold text-linen-white">Berat</h3>
             </div>
         </div>
         <!-- Card de Península de Karaburun -->
         <div class="destination-card relative rounded-lg overflow-hidden shadow-lg cursor-pointer group" data-target="karaburun-details">
-            <img src={karaburunImage.src} alt="Una playa de aguas turquesas en la Península de Karaburun, accesible solo por barco." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+            <Picture src={karaburunImage} formats={['avif', 'webp']} alt="Una playa de aguas turquesas en la Península de Karaburun, accesible solo por barco." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" widths={[400, 800, 1200]} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             <div class="absolute inset-0 bg-slate-gray/60 flex items-center justify-center">
                 <h3 class="text-3xl font-semibold text-linen-white text-center">Península de Karaburun</h3>
             </div>
         </div>
         <!-- Card de Riviera Albanesa -->
         <div class="destination-card relative rounded-lg overflow-hidden shadow-lg cursor-pointer group" data-target="riviera-details">
-            <img src={rivieraImage.src} alt="Playa paradisíaca de la Riviera Albanesa con aguas cristalinas y sombrillas." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+            <Picture src={rivieraImage} formats={['avif', 'webp']} alt="Playa paradisíaca de la Riviera Albanesa con aguas cristalinas y sombrillas." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" widths={[400, 800, 1200]} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             <div class="absolute inset-0 bg-slate-gray/60 flex items-center justify-center">
                 <h3 class="text-3xl font-semibold text-linen-white text-center">Riviera Albanesa</h3>
             </div>
         </div>
         <!-- Card de Gjirokastër -->
         <div class="destination-card relative rounded-lg overflow-hidden shadow-lg cursor-pointer group" data-target="gjirokaster-details">
-            <img src={gjirokasterImage.src} alt="Tejados de piedra gris y la imponente fortaleza de Gjirokastër, ciudad patrimonio de la UNESCO." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+            <Picture src={gjirokasterImage} formats={['avif', 'webp']} alt="Tejados de piedra gris y la imponente fortaleza de Gjirokastër, ciudad patrimonio de la UNESCO." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" widths={[400, 800, 1200]} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw" />
             <div class="absolute inset-0 bg-slate-gray/60 flex items-center justify-center">
                 <h3 class="text-3xl font-semibold text-linen-white">Gjirokastër</h3>
             </div>

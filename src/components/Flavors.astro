@@ -1,4 +1,5 @@
 ---
+import { Picture } from 'astro:assets';
 import taveKosiImage from '../assets/tave_kosi.jpg';
 import byrekImage from '../assets/byrek.jpeg';
 import fergeseImage from '../assets/fergese.jpg';
@@ -13,7 +14,7 @@ import kadaifImage from '../assets/kadaif.jpg';
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
         <!-- Card de Tavë Kosi -->
         <div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
-            <img src={taveKosiImage.src} alt="Tavë Kosi, un plato tradicional albanés de cordero horneado con yogur y arroz." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+            <Picture src={taveKosiImage} formats={['avif', 'webp']} alt="Tavë Kosi, un plato tradicional albanés de cordero horneado con yogur y arroz." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" widths={[400, 800]} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw" />
             <div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
                 <h3 class="text-2xl font-semibold text-linen-white">Tavë Kosi</h3>
                 <p class="text-linen-white mt-2">Cordero asado con arroz en una cremosa salsa de yogur.</p>
@@ -21,7 +22,7 @@ import kadaifImage from '../assets/kadaif.jpg';
         </div>
         <!-- Card de Byrek -->
         <div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
-            <img src={byrekImage.src} alt="Byrek albanés, un pastel de hojaldre salado recién horneado." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+            <Picture src={byrekImage} formats={['avif', 'webp']} alt="Byrek albanés, un pastel de hojaldre salado recién horneado." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" widths={[400, 800]} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw" />
             <div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
                 <h3 class="text-2xl font-semibold text-linen-white">Byrek</h3>
                 <p class="text-linen-white mt-2">Pastel de hojaldre salado relleno de espinacas, queso o carne.</p>
@@ -29,7 +30,7 @@ import kadaifImage from '../assets/kadaif.jpg';
         </div>
         <!-- Card de Fërgesë -->
         <div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
-            <img src={fergeseImage.src} alt="Fërgesë, un guiso albanés de pimientos, tomate y requesón servido en una cazuela de barro." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+            <Picture src={fergeseImage} formats={['avif', 'webp']} alt="Fërgesë, un guiso albanés de pimientos, tomate y requesón servido en una cazuela de barro." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" widths={[400, 800]} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw" />
             <div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
                 <h3 class="text-2xl font-semibold text-linen-white">Fërgesë</h3>
                 <p class="text-linen-white mt-2">Pimientos, tomates y requesón, a menudo con carne.</p>
@@ -37,7 +38,7 @@ import kadaifImage from '../assets/kadaif.jpg';
         </div>
         <!-- Card de Qofte -->
         <div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
-            <img src={qofteImage.src} alt="Qofte, albóndigas de carne a la parrilla sazonadas con hierbas mediterráneas." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+            <Picture src={qofteImage} formats={['avif', 'webp']} alt="Qofte, albóndigas de carne a la parrilla sazonadas con hierbas mediterráneas." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" widths={[400, 800]} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw" />
             <div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
                 <h3 class="text-2xl font-semibold text-linen-white">Qofte</h3>
                 <p class="text-linen-white mt-2">Albóndigas de cordero o ternera sazonadas con hierbas.</p>
@@ -45,7 +46,7 @@ import kadaifImage from '../assets/kadaif.jpg';
         </div>
         <!-- Card de Speca të Mbushura -->
         <div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
-            <img src={specaImage.src} alt="Speca të Mbushura, pimientos amarillos rellenos de arroz y carne, un plato casero albanés." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+            <Picture src={specaImage} formats={['avif', 'webp']} alt="Speca të Mbushura, pimientos amarillos rellenos de arroz y carne, un plato casero albanés." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" widths={[400, 800]} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw" />
             <div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
                 <h3 class="text-2xl font-semibold text-linen-white">Speca të Mbushura</h3>
                 <p class="text-linen-white mt-2">Pimientos rellenos de arroz, carne picada y especias.</p>
@@ -53,7 +54,7 @@ import kadaifImage from '../assets/kadaif.jpg';
         </div>
         <!-- Card de Qifqi -->
         <div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
-            <img src={qifqiImage.src} alt="Qifqi, unas bolas de arroz fritas con menta, especialidad de Gjirokastër." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+            <Picture src={qifqiImage} formats={['avif', 'webp']} alt="Qifqi, unas bolas de arroz fritas con menta, especialidad de Gjirokastër." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" widths={[400, 800]} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw" />
             <div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
                 <h3 class="text-2xl font-semibold text-linen-white">Qifqi</h3>
                 <p class="text-linen-white mt-2">Bolas de arroz con menta, especialidad de Gjirokastër.</p>
@@ -61,7 +62,7 @@ import kadaifImage from '../assets/kadaif.jpg';
         </div>
         <!-- Card de Trileçe -->
         <div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
-            <img src={trileceImage.src} alt="Trileçe, un bizcocho esponjoso bañado en tres leches y cubierto con una capa de caramelo." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+            <Picture src={trileceImage} formats={['avif', 'webp']} alt="Trileçe, un bizcocho esponjoso bañado en tres leches y cubierto con una capa de caramelo." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" widths={[400, 800]} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw" />
             <div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
                 <h3 class="text-2xl font-semibold text-linen-white">Trileçe</h3>
                 <p class="text-linen-white mt-2">Bizcocho bañado en tres tipos de leche, cubierto de caramelo.</p>
@@ -69,7 +70,7 @@ import kadaifImage from '../assets/kadaif.jpg';
         </div>
         <!-- Card de Kadaif -->
         <div class="flavor-card relative rounded-lg overflow-hidden shadow-lg group">
-            <img src={kadaifImage.src} alt="Kadaif, un postre balcánico de fideos finos horneados con nueces y empapado en almíbar." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300">
+            <Picture src={kadaifImage} formats={['avif', 'webp']} alt="Kadaif, un postre balcánico de fideos finos horneados con nueces y empapado en almíbar." class="w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-300" widths={[400, 800]} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw" />
             <div class="absolute inset-0 bg-slate-gray/60 flex flex-col items-center justify-center text-center p-4">
                 <h3 class="text-2xl font-semibold text-linen-white">Kadaif</h3>
                 <p class="text-linen-white mt-2">Fideos finos horneados con nueces y almíbar.</p>
