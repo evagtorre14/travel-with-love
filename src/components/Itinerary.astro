@@ -1,5 +1,5 @@
 ---
-import { Plane, Bed, Bus, Footprints, Mountain, Backpack, Sandwich, Droplets, CarFront, Star, Ship, Waves, Sun, Search, Sailboat, Castle } from 'lucide-astro';
+import { Plane, Bed, Bus, Footprints, Mountain, Backpack, Sandwich, Droplets, CarFront, Star, Ship, Waves, Sun, Search, Sailboat, Castle, WavesLadder, CookingPot, StopCircle, Dices } from 'lucide-astro';
 ---
 <section id="itinerary" class="py-20 px-4">
 		<h2 class="text-4xl font-sans font-semibold text-center text-slate-gray mb-12">Itinerario Provisional</h2>
@@ -61,7 +61,7 @@ import { Plane, Bed, Bus, Footprints, Mountain, Backpack, Sandwich, Droplets, Ca
 					<div class="space-y-4">
 						<div class="flex items-start">
 							<Backpack class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Día de trekking. Madrugaremos para hacer la espectacular ruta desde <a href="#" data-destination-link="theth-details" class="text-terracotta font-semibold hover:underline">Theth</a> hasta el Paso de Valbona, el punto más alto y con las mejores vistas del recorrido.</p>
+							<p class="text-slate-gray">Día de trekking. Madrugamos para hacer la espectacular ruta desde <a href="#" data-destination-link="theth-details" class="text-terracotta font-semibold hover:underline">Theth</a> hasta el Paso de Valbona, el punto más alto y con las mejores vistas del recorrido.</p>
 						</div>
 						<div class="flex items-start">
 							<Sandwich class="w-6 h-6 mr-4 text-terracotta" />
@@ -128,12 +128,12 @@ import { Plane, Bed, Bus, Footprints, Mountain, Backpack, Sandwich, Droplets, Ca
 							<p class="text-slate-gray">Nos despedimos de las montañas. Viaje en furgoneta de Theth a Shkodër (aprox. 3 horas).</p>
 						</div>
 						<div class="flex items-start">
-							<Bus class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">En Shkodër, cogemos el autobús de vuelta a Tirana (aprox. 2 horas).</p>
+							<CarFront class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">En Shkodër, alquilamos un coche y conducimos hasta Berat (aprox. 4 horas)</p>
 						</div>
 						<div class="flex items-start">
-							<CarFront class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Recogida del coche de alquiler en Tirana y conducimos hacia el sur hasta <a href="#" data-destination-link="berat-details" class="text-terracotta font-semibold hover:underline">Berat</a> (aprox. 2 horas).</p>
+							<Castle class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Por la noche, visitamos la zona del castillo y cenamos en un restaurante típico de la zona.</p>
 						</div>
 						<div class="flex items-start">
 							<Bed class="w-6 h-6 mr-4 text-terracotta" />
@@ -153,11 +153,11 @@ import { Plane, Bed, Bus, Footprints, Mountain, Backpack, Sandwich, Droplets, Ca
 					<div class="space-y-4">
 						<div class="flex items-start">
 							<Footprints class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Mañana dedicada a explorar <a href="#" data-destination-link="berat-details" class="text-terracotta font-semibold hover:underline">Berat</a>, la "Ciudad de las Mil Ventanas", posiblemente con un free tour para descubrir sus secretos.</p>
+							<p class="text-slate-gray">Mañana dedicada a explorar <a href="#" data-destination-link="berat-details" class="text-terracotta font-semibold hover:underline">Berat</a>, la "Ciudad de las Mil Ventanas", con un free tour para descubrir sus secretos.</p>
 						</div>
 						<div class="flex items-start">
 							<CarFront class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Después de comer, conducimos hacia la costa hasta la zona de Vlorë (aprox. 1.5 horas).</p>
+							<p class="text-slate-gray">Después de comer, conducimos hacia la costa hasta la zona de Vlorë (aprox. 2-3 horas por el tráfico).</p>
 						</div>
 						<div class="flex items-start">
 							<Footprints class="w-6 h-6 mr-4 text-terracotta" />
@@ -165,7 +165,7 @@ import { Plane, Bed, Bus, Footprints, Mountain, Backpack, Sandwich, Droplets, Ca
 						</div>
 						<div class="flex items-start">
 							<Bed class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Noche en la zona de Radhimë u Orikum, una opción más tranquila y cercana a los tours que el centro de Vlorë.</p>
+							<p class="text-slate-gray">Noche en Vlorë.</p>
 						</div>
 					</div>
 				</div>
@@ -189,15 +189,15 @@ import { Plane, Bed, Bus, Footprints, Mountain, Backpack, Sandwich, Droplets, Ca
 						</div>
 						<div class="flex items-start">
 							<CarFront class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Por la tarde, conducimos hacia el sur por la espectacular carretera de la costa.</p>
+							<p class="text-slate-gray">Por la tarde, conducimos hacia el sur por la carretera de la costa.</p>
 						</div>
 						<div class="flex items-start">
 							<Sun class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Tarde de relax y playa en alguna de las famosas calas de la <a href="#" data-destination-link="riviera-details" class="text-terracotta font-semibold hover:underline">Riviera Albanesa</a>: Bristan, Skaloma, Dafina, Grama, Dhërmi, Jale o la increíble Gjipe.</p>
+							<p class="text-slate-gray">Tarde de relax y playa en Dhermi con un atardecer muy bonito</p>
 						</div>
 						<div class="flex items-start">
 							<Bed class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Noche en un alojamiento por la zona de Dhërmi o Jale.</p>
+							<p class="text-slate-gray">Noche en un alojamiento por la zona.</p>
 						</div>
 					</div>
 				</div>
@@ -212,12 +212,12 @@ import { Plane, Bed, Bus, Footprints, Mountain, Backpack, Sandwich, Droplets, Ca
 					<h3 class="text-3xl font-semibold text-slate-gray mb-4">Miércoles, 13 de Agosto</h3>
 					<div class="space-y-4">
 						<div class="flex items-start">
-							<Search class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Día libre para explorar la zona de la <a href="#" data-destination-link="riviera-details" class="text-terracotta font-semibold hover:underline">Riviera Albanesa</a> a nuestro ritmo.</p>
+							<CarFront class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Conducimos hasta Himare en busca de alguna playa que merezca la pena.</p>
 						</div>
 						<div class="flex items-start">
 							<Sailboat class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Posibilidad de buscar alguna actividad acuática, como alquilar un kayak para explorar calas cercanas.</p>
+							<p class="text-slate-gray">Día de playa y relax en Himare</p>
 						</div>
 						<div class="flex items-start">
 							<Bed class="w-6 h-6 mr-4 text-terracotta" />
@@ -236,16 +236,20 @@ import { Plane, Bed, Bus, Footprints, Mountain, Backpack, Sandwich, Droplets, Ca
 					<h3 class="text-3xl font-semibold text-slate-gray mb-4">Jueves, 14 de Agosto</h3>
 					<div class="space-y-4">
 						<div class="flex items-start">
-							<CarFront class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Ruta desde Ksamil a <a href="#" data-destination-link="gjirokaster-details" class="text-terracotta font-semibold hover:underline">Gjirokastër</a> (aprox. 1.5 horas).</p>
+							<Sailboat class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Día de playa en Himarë</p>
 						</div>
 						<div class="flex items-start">
-							<Castle class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Visita al Castillo de Gjirokastër, el bazar y las casas otomanas, con la posibilidad de hacer un free tour.</p>
+							<WavesLadder class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Paddle surf bordeando la costa</p>
+						</div>
+						<div class="flex items-start">
+							<CookingPot class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Cenita rica</p>
 						</div>
 						<div class="flex items-start">
 							<Bed class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Noche en Gjirokastër.</p>
+							<p class="text-slate-gray">Noche en alojamiento de agroturismo de Himarë</p>
 						</div>
 					</div>
 				</div>
@@ -260,8 +264,8 @@ import { Plane, Bed, Bus, Footprints, Mountain, Backpack, Sandwich, Droplets, Ca
 					<h3 class="text-3xl font-semibold text-slate-gray mb-4">Viernes, 15 de Agosto</h3>
 					<div class="space-y-4">
 						<div class="flex items-start">
-							<Bus class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Viaje de Gjirokastër a Tirana (aprox. 3.5 horas).</p>
+							<CarFront class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Viaje de Himarë a Tirana (aprox. 5 horas por el tráfico).</p>
 						</div>
 						<div class="flex items-start">
 							<CarFront class="w-6 h-6 mr-4 text-terracotta" />
@@ -269,7 +273,7 @@ import { Plane, Bed, Bus, Footprints, Mountain, Backpack, Sandwich, Droplets, Ca
 						</div>
 						<div class="flex items-start">
 							<Footprints class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Tarde para hacer un free tour por Tirana y descubrir la capital.</p>
+							<p class="text-slate-gray">Tarde de free tour por Tirana para descubrir la historia Comunista del país.</p>
 						</div>
 						<div class="flex items-start">
 							<Bed class="w-6 h-6 mr-4 text-terracotta" />
@@ -289,11 +293,19 @@ import { Plane, Bed, Bus, Footprints, Mountain, Backpack, Sandwich, Droplets, Ca
 					<div class="space-y-4">
 						<div class="flex items-start">
 							<Search class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Día libre por Tirana o día de reajuste para el itinerario.</p>
+							<p class="text-slate-gray">Visita al Bunk'art 1 para flipar con la ciudad subterráneo que se montó Enver Hoxha</p>
+						</div>
+						<div class="flex items-start">
+							<StopCircle class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Visita al Campo de Tiro de Tirana. No nos sentimos orgullosas pero en Albania está permitido disparar armas sin licencia y nos dio curiosidad. Experiencia bastante fuerte y un rollo turbio mafioso alrededor.</p>
+						</div>
+						<div class="flex items-start">
+							<Dices class="w-6 h-6 mr-4 text-terracotta" />
+							<p class="text-slate-gray">Tarde de billar en un local de lugareños bastante simpáticos</p>
 						</div>
 						<div class="flex items-start">
 							<Bed class="w-6 h-6 mr-4 text-terracotta" />
-							<p class="text-slate-gray">Noche en Tirana.</p>
+							<p class="text-slate-gray">última noche en Tirana.</p>
 						</div>
 					</div>
 				</div>
